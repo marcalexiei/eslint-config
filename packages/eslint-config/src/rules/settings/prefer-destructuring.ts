@@ -1,28 +1,19 @@
-import type { Linter } from 'eslint';
+import type { ESLintRules } from 'eslint/rules';
 
-export const PREFER_DESTRUCTURING_RULE_SETTING: Linter.RuleSeverityAndOptions<
+export const PREFER_DESTRUCTURING_RULE_SETTING: ESLintRules['prefer-destructuring'] =
   [
+    'error',
     {
-      VariableDeclarator: { array: boolean; object: boolean };
-      AssignmentExpression: { array: boolean; object: boolean };
+      VariableDeclarator: {
+        array: true,
+        object: true,
+      },
+      AssignmentExpression: {
+        array: false,
+        object: false,
+      },
     },
     {
-      enforceForRenamedProperties: boolean;
+      enforceForRenamedProperties: false,
     },
-  ]
-> = [
-  'error',
-  {
-    VariableDeclarator: {
-      array: true,
-      object: true,
-    },
-    AssignmentExpression: {
-      array: false,
-      object: false,
-    },
-  },
-  {
-    enforceForRenamedProperties: false,
-  },
-];
+  ];

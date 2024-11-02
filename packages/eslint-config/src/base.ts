@@ -11,6 +11,8 @@ import { ERROR_RULES } from './rules/errors.js';
 import { ES6_RULES } from './rules/es6.js';
 import { IMPORT_RULES } from './rules/import.js';
 import { STRICT_RULES } from './rules/strict.js';
+import { STYLISTIC_ISSUES_RULES } from './rules/stylelistic-issues.js';
+import { VARIABLES_RULES } from './rules/variables.js';
 
 const baseConfig: Linter.Config = {
   name: '@marcalexiei/eslint-config/base',
@@ -36,9 +38,11 @@ const baseConfig: Linter.Config = {
   rules: {
     ...BEST_PRACTICES_RULES,
     ...ERROR_RULES,
-    ...IMPORT_RULES,
     ...ES6_RULES,
+    ...IMPORT_RULES,
     ...STRICT_RULES,
+    ...STYLISTIC_ISSUES_RULES,
+    ...VARIABLES_RULES,
   },
 };
 
