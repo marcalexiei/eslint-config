@@ -1,0 +1,17 @@
+{
+  "name": "eslint-config-tests-react",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test ./*.spec.js",
+    "lint": "eslint fixtures"
+  },
+  "dependencies": {
+    "react": "18.3.1",
+    "@types/react": "18.3.11"
+  },
+  "devDependencies": {
+    "@marcalexiei/eslint-config": "workspace:*"
+  }
+}

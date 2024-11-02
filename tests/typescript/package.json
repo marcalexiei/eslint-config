@@ -1,0 +1,13 @@
+{
+  "name": "eslint-config-tests-typescript",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test ./*.spec.js",
+    "lint": "eslint fixtures"
+  },
+  "devDependencies": {
+    "@marcalexiei/eslint-config": "workspace:*"
+  }
+}
