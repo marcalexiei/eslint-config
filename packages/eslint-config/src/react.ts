@@ -1,10 +1,12 @@
 import type { Linter } from 'eslint';
 import reactPlugin from 'eslint-plugin-react';
 
+import { ALL_JSX_EXTENSIONS_MATCH } from './utils/extensions.js';
+
 // @ts-expect-error `configs.flat.recommended.rules` doesn't have proper types
 const reactConfig: Linter.Config = {
   name: '@marcalexiei/eslint-config/react',
-  files: ['**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}'],
+  files: [ALL_JSX_EXTENSIONS_MATCH],
   // @ts-expect-error flat is optional for types but actually is always defined
   ...reactPlugin.configs.flat.recommended,
   rules: {
