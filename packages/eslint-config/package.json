@@ -1,6 +1,6 @@
 {
   "name": "@marcalexiei/eslint-config",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A custom ESLint config",
   "type": "module",
   "publishConfig": {
