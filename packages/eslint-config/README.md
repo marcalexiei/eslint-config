@@ -6,6 +6,7 @@ The following presets are available:
 - `base` → `"@marcalexiei/eslint-config/base"`
 - `typescript` → `"@marcalexiei/eslint-config/typescript"`
 - `react` → `"@marcalexiei/eslint-config/react"`
+- `react-hooks` → `"@marcalexiei/eslint-config/react-hooks"`
 
 ## Install
 
@@ -99,12 +100,14 @@ npm i --save-dev eslint @marcalexiei/eslint-config typescript typescript-eslint 
 import base from '@marcalexiei/eslint-config/base';
 import typescript from '@marcalexiei/eslint-config/typescript';
 import react from '@marcalexiei/eslint-config/react';
+import reactHooks from '@marcalexiei/eslint-config/react-hooks';
 
 /** @type {import('eslint').Linter.Config} */
 export default [
   base,
   typescript,
-  ...react,
+  react,
+  reactHooks,
   {
     languageOptions: {
       parserOptions: {

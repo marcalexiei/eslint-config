@@ -3,7 +3,7 @@ import reactPlugin from 'eslint-plugin-react';
 
 import { ALL_JSX_EXTENSIONS_MATCH } from './utils/extensions.js';
 
-// @ts-expect-error `configs.flat.recommended.rules` doesn't have proper types
+// @ts-expect-error `reactPlugin.configs.flat.recommended.rules` doesn't have proper types
 const reactConfig: Linter.Config = {
   name: '@marcalexiei/eslint-config/react',
   files: [ALL_JSX_EXTENSIONS_MATCH],
