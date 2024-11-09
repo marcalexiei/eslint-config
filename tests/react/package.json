@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "node --test ./*.spec.js",
-    "lint": "eslint fixtures"
+    "lint": "eslint ."
   },
   "dependencies": {
     "react": "18.3.1",
