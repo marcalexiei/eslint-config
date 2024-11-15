@@ -9,3 +9,6 @@ export function testShadow() {
   const str = '';
   str.trim();
 }
+
+// should throw warning on not used directives
+// eslint-disable-line no-shadow

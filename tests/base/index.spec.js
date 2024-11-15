@@ -8,7 +8,7 @@ import { ESLint } from 'eslint';
 const eslint = new ESLint();
 
 describe('generic', () => {
-  it('throw error', async () => {
+  it('throws error', async () => {
     const result = await eslint.lintFiles(['./fixtures/generic']);
 
     assert.strictEqual(result.length, 1);
@@ -21,5 +21,15 @@ describe('generic', () => {
 
     assert.strictEqual(noUnusedError.ruleId, 'no-unused-vars');
     assert.strictEqual(noShadowError.ruleId, 'no-shadow');
+  });
+
+  it('report warning on unused directives', async () => {
+    const result = await eslint.lintFiles(['./fixtures/generic']);
+
+    assert.strictEqual(result.length, 1);
+
+    const [firstFile] = result;
+
+    assert.strictEqual(firstFile.warningCount, 1);
   });
 });
