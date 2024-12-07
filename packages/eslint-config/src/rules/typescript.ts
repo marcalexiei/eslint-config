@@ -100,9 +100,50 @@ export const TYPESCRIPT_RULES: Linter.RulesRecord = {
   // https://typescript-eslint.io/rules/method-signature-style/
   '@typescript-eslint/method-signature-style': ['error', 'property'],
 
-  // "we are not Google or Apple"
   // https://typescript-eslint.io/rules/naming-convention/
-  '@typescript-eslint/naming-convention': 'off',
+  '@typescript-eslint/naming-convention': [
+    'error',
+    {
+      selector: 'default',
+      format: ['camelCase'],
+      leadingUnderscore: 'allow',
+      trailingUnderscore: 'allow',
+    },
+
+    {
+      selector: 'import',
+      format: ['camelCase', 'PascalCase'],
+    },
+
+    {
+      selector: 'variable',
+      format: [
+        'camelCase',
+        'UPPER_CASE',
+        'PascalCase', // for React/Solid
+      ],
+      leadingUnderscore: 'allow',
+      trailingUnderscore: 'allow',
+    },
+
+    {
+      selector: 'function',
+      format: [
+        'camelCase',
+        'PascalCase', // for React/Solid
+      ],
+    },
+
+    {
+      selector: 'typeLike',
+      format: ['PascalCase'],
+    },
+
+    {
+      selector: 'enumMember',
+      format: ['UPPER_CASE'],
+    },
+  ],
 
   // https://typescript-eslint.io/rules/no-explicit-any/
   '@typescript-eslint/no-explicit-any': 'error',
