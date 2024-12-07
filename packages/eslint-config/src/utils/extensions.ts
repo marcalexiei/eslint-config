@@ -1,12 +1,12 @@
-export const JS_EXTENSIONS = ['.js', '.cjs', '.mjs'];
+export const JS_EXTENSIONS = ['.js', '.cjs', '.mjs'] as const;
 
-export const TS_EXTENSIONS = ['.ts', '.cts', '.mts'];
+export const TS_EXTENSIONS = ['.ts', '.cts', '.mts'] as const;
 
 // ================================================
 
-export const JSX_EXTENSIONS = ['.jsx'];
+export const JSX_EXTENSIONS = ['.jsx'] as const;
 
-export const TSX_EXTENSIONS = ['.tsx'];
+export const TSX_EXTENSIONS = ['.tsx'] as const;
 
 // ================================================
 
@@ -17,4 +17,10 @@ export const ALL_EXTENSIONS = [
   ...TSX_EXTENSIONS,
 ];
 
-export const ALL_JSX_EXTENSIONS_MATCH = `**/*.{${ALL_EXTENSIONS.map((it) => it.slice(1)).join(',')}}`;
+// ================================================
+
+function createMinimatchFrom(extensionList: Array<`.${string}`>) {
+  return `**/*.{${extensionList.map((it) => it.slice(1)).join(',')}}`;
+}
+
+export const ALL_JSX_EXTENSIONS_MINIMATCH = createMinimatchFrom(ALL_EXTENSIONS);
