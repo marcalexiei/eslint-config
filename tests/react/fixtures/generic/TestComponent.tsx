@@ -3,19 +3,19 @@ import React, { useState } from 'react';
 import type { MyModel } from './models';
 
 interface TestComponentProps {
-  boh?: MyModel;
+  data?: MyModel;
 
   itemList: Array<MyModel>;
 }
 
 export function TestComponent(props: TestComponentProps): React.JSX.Element {
-  const { boh } = props;
+  const { data } = props;
 
-  const [myState] = useState();
+  const [myState] = useState('something');
 
   return (
     <>
-      TestComponent {boh} {myState}
+      TestComponent {data?.boh} {myState}
     </>
   );
 }
