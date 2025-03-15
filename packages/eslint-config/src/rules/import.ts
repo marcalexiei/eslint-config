@@ -8,7 +8,7 @@ import type { Linter } from 'eslint';
 // import type order from 'eslint-plugin-import-x/rules/order.js';
 
 // type GetRuleOptions<TRule> =
-//   TRule extends RuleModule<infer _, infer Options>
+//   TRule extends RuleModule<string, infer Options>
 //     ? Linter.RuleSeverityAndOptions<Options & unknown[]>
 //     : never;
 
