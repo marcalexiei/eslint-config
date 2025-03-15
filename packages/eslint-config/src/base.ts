@@ -1,5 +1,6 @@
 import type { ESLint, Linter } from 'eslint';
 import eslintPluginImportX from 'eslint-plugin-import-x';
+import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript';
 
 import {
   ALL_EXTENSIONS,
@@ -26,13 +27,12 @@ const baseConfig: Linter.Config = {
     'import-x': eslintPluginImportX as unknown as ESLint.Plugin,
   },
   settings: {
+    /** @see https://github.com/un-ts/eslint-plugin-import-x/releases/tag/v4.6.0 */
+    'import-x/resolver-next': [createTypeScriptImportResolver()],
     'import-x/extensions': ALL_EXTENSIONS,
     'import-x/external-module-folders': ['node_modules', 'node_modules/@types'],
     'import-x/parsers': {
       '@typescript-eslint/parser': [...TS_EXTENSIONS, ...TSX_EXTENSIONS],
-    },
-    'import-x/resolver': {
-      typescript: true,
     },
   },
   rules: {
