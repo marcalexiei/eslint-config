@@ -22,7 +22,7 @@ jobs:
         node:
           - 20
           - 22
-          - 23
+          - 24
 
     runs-on: ubuntu-latest
     timeout-minutes: 20
@@ -46,7 +46,9 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        script: [typecheck, format]
+        script:
+          - typecheck
+          - format
 
     name: Code check
     runs-on: ubuntu-latest
