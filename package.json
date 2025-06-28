@@ -24,7 +24,7 @@
     "release": "pnpm run build && changeset publish",
     "check-all": "pnpm run build && pnpm run test && pnpm run \"/^(typecheck|format|lint)$/\""
   },
-  "packageManager": "pnpm@10.6.3+sha512.bb45e34d50a9a76e858a95837301bfb6bd6d35aea2c5d52094fa497a467c43f5c440103ce2511e9e0a2f89c3d6071baac3358fc68ac6fb75e2ceb3d2736065e6",
+  "packageManager": "pnpm@10.12.4+sha512.5ea8b0deed94ed68691c9bad4c955492705c5eeb8a87ef86bc62c74a26b037b08ff9570f108b2e4dbd1dd1a9186fea925e527f141c648e85af45631074680184",
   "prettier": "@marcalexiei/prettier-config",
   "devDependencies": {
     "@changesets/changelog-github": "0.5.1",
