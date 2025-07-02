@@ -1,28 +1,12 @@
 import type { Linter } from 'eslint';
-// import type { RuleModule } from '@typescript-eslint/utils/ts-eslint';
+import type eslintPluginImportX from 'eslint-plugin-import-x';
 
-// import type noUnresolved from 'eslint-plugin-import-x/rules/no-unresolved.js';
-// import type noExtraneousDeps from 'eslint-plugin-import-x/rules/no-extraneous-dependencies.js';
-// import type extensions from 'eslint-plugin-import-x/rules/extensions.js';
-// import type maxDeps from 'eslint-plugin-import-x/rules/max-dependencies.js';
-// import type order from 'eslint-plugin-import-x/rules/order.js';
+import type { PluginRulesRemapper } from '../utils/plugin-rules-mapper.js';
 
-// type GetRuleOptions<TRule> =
-//   TRule extends RuleModule<string, infer Options>
-//     ? Linter.RuleSeverityAndOptions<Options & unknown[]>
-//     : never;
+type PluginRules = Partial<(typeof eslintPluginImportX)['rules']>;
+type PluginRulesConfig = PluginRulesRemapper<'import-x', PluginRules>;
 
-// type ImportRulesRecord = {
-//   'import-x/no-unresolved': GetRuleOptions<typeof noUnresolved>;
-//   'import-x/no-extraneous-dependencies': GetRuleOptions<
-//     typeof noExtraneousDeps
-//   >;
-//   'import-x/extensions': GetRuleOptions<typeof extensions>;
-//   'import-x/max-dependencies': GetRuleOptions<typeof maxDeps>;
-//   'import-x/order': GetRuleOptions<typeof order>;
-// };
-
-export const IMPORT_RULES: Linter.RulesRecord = {
+export const IMPORT_RULES: Linter.Config<PluginRulesConfig>['rules'] = {
   // https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/no-unresolved.md
   'import-x/no-unresolved': ['error', { commonjs: true }],
 
