@@ -8,6 +8,10 @@
     "lint": "eslint ."
   },
   "devDependencies": {
-    "@marcalexiei/eslint-config": "workspace:*"
+    "@marcalexiei/eslint-config": "workspace:*",
+    "eslint": "9.30.0",
+    "eslint-import-resolver-typescript": "4.4.4",
+    "eslint-plugin-import-x": "4.16.1",
+    "typescript-eslint": "8.35.0"
   }
 }
