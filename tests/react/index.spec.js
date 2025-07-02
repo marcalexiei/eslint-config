@@ -1,5 +1,4 @@
 // @ts-check
-/* eslint-disable import-x/no-extraneous-dependencies */
 import { describe, it } from 'node:test';
 import assert from 'assert';
 

@@ -17,6 +17,9 @@ import { VARIABLES_RULES } from './rules/variables.js';
 
 const baseConfig: Linter.Config = {
   name: '@marcalexiei/eslint-config/base',
+  linterOptions: {
+    reportUnusedDisableDirectives: 'error',
+  },
   languageOptions: {
     parserOptions: {
       sourceType: 'module',

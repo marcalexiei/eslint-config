@@ -1,5 +1,4 @@
 // @ts-check
-/* eslint-disable import-x/no-extraneous-dependencies */
 import { describe, it } from 'node:test';
 import assert from 'assert';
 
@@ -15,21 +14,20 @@ describe('generic', () => {
 
     const [firstFile] = result;
 
-    assert.strictEqual(firstFile.errorCount, 2);
+    assert.strictEqual(firstFile.errorCount, 3);
 
-    const [noUnusedError, noShadowError] = firstFile.messages;
+    const [
+      noUnusedError, //
+      noShadowError,
+      disabledDirectiveError,
+    ] = firstFile.messages;
 
     assert.strictEqual(noUnusedError.ruleId, 'no-unused-vars');
     assert.strictEqual(noShadowError.ruleId, 'no-shadow');
-  });
-
-  it('report warning on unused directives', async () => {
-    const result = await eslint.lintFiles(['./fixtures/generic']);
-
-    assert.strictEqual(result.length, 1);
-
-    const [firstFile] = result;
-
-    assert.strictEqual(firstFile.warningCount, 1);
+    assert.strictEqual(disabledDirectiveError.ruleId, null);
+    assert.strictEqual(
+      disabledDirectiveError.message,
+      "Unused eslint-disable directive (no problems were reported from 'no-shadow').",
+    );
   });
 });

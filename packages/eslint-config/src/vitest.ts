@@ -7,6 +7,7 @@ type PluginRules = Partial<(typeof eslintPluginVitest)['rules']>;
 type PluginRulesConfig = PluginRulesRemapper<'vitest', PluginRules>;
 
 const vitestConfig: Linter.Config<PluginRulesConfig> = {
+  name: '@marcalexiei/eslint-config/vitest',
   files: ['tests/**'],
   plugins: { vitest: eslintPluginVitest as unknown as ESLint.Plugin },
   rules: {
