@@ -32,7 +32,7 @@
     "@commitlint/cli": "19.8.1",
     "@commitlint/config-conventional": "19.8.1",
     "@marcalexiei/prettier-config": "1.1.1",
-    "@types/node": "24.0.7",
+    "@types/node": "24.0.10",
     "husky": "9.1.7",
     "prettier": "3.6.2",
     "typescript": "5.8.3"
