@@ -2,6 +2,7 @@
   "extends": "../../tsconfig.base.json",
   "exclude": ["dist"],
   "compilerOptions": {
-    "module": "Node16"
+    "module": "Node16",
+    "verbatimModuleSyntax": true
   }
 }

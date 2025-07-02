@@ -127,10 +127,10 @@ export const STYLISTIC_ISSUES_RULES: Partial<ESLintRules> = {
   // https://eslint.org/docs/rules/prefer-object-spread
   'prefer-object-spread': 'error',
 
-  // https://eslint.org/docs/rules/osrt-keys
+  // https://eslint.org/docs/rules/sort-keys
   'sort-keys': 'off',
 
-  // https://eslint.org/docs/rules/osrt-vars
+  // https://eslint.org/docs/rules/sort-vars
   'sort-vars': 'off',
 
   // https://eslint.org/docs/latest/rules/unicode-bom

@@ -31,17 +31,10 @@
     "@changesets/cli": "2.29.5",
     "@commitlint/cli": "19.8.1",
     "@commitlint/config-conventional": "19.8.1",
-    "@eslint/js": "9.30.0",
     "@marcalexiei/prettier-config": "1.1.1",
     "@types/node": "24.0.7",
-    "eslint": "9.30.0",
-    "eslint-import-resolver-typescript": "4.4.4",
-    "eslint-plugin-import-x": "4.16.1",
-    "eslint-plugin-react": "7.37.5",
-    "eslint-plugin-react-hooks": "5.2.0",
     "husky": "9.1.7",
     "prettier": "3.6.2",
-    "typescript": "5.8.3",
-    "typescript-eslint": "8.35.0"
+    "typescript": "5.8.3"
   }
 }
