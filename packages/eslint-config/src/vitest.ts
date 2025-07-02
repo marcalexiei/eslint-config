@@ -1,20 +1,12 @@
 import type { Linter, ESLint } from 'eslint';
 import eslintPluginVitest from '@vitest/eslint-plugin';
-import type { RuleModule } from '@typescript-eslint/utils/ts-eslint';
 
-type GetRuleOptions<TRule> =
-  TRule extends RuleModule<string, infer Options>
-    ? Linter.RuleSeverityAndOptions<Options & unknown[]> | Linter.RuleSeverity
-    : never;
+import type { PluginRulesRemapper } from './utils/plugin-rules-mapper.js';
 
-type VitestPluginRules = Partial<(typeof eslintPluginVitest)['rules']>;
-type ConfigRulesRemapped = {
-  [RuleName in keyof VitestPluginRules as `vitest/${RuleName & string}`]: GetRuleOptions<
-    VitestPluginRules[RuleName]
-  >;
-};
+type PluginRules = Partial<(typeof eslintPluginVitest)['rules']>;
+type PluginRulesConfig = PluginRulesRemapper<'vitest', PluginRules>;
 
-const vitestConfig: Linter.Config<ConfigRulesRemapped> = {
+const vitestConfig: Linter.Config<PluginRulesConfig> = {
   files: ['tests/**'],
   plugins: { vitest: eslintPluginVitest as unknown as ESLint.Plugin },
   rules: {
