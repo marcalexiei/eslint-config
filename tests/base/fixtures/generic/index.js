@@ -10,5 +10,5 @@ export function testShadow() {
   str.trim();
 }
 
-// should throw warning on not used directives
+// should throw error on not used directives
 // eslint-disable-line no-shadow
