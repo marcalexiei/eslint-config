@@ -184,6 +184,10 @@ export const TYPESCRIPT_RULES: Linter.RulesRecord = {
   // https://typescript-eslint.io/rules/no-magic-numbers/
   '@typescript-eslint/no-magic-numbers': 'off',
 
+  // Disabled to avoid conflicts with @typescript-eslint/non-nullable-type-assertion-style
+  // https://typescript-eslint.io/rules/no-non-null-assertion/
+  '@typescript-eslint/no-non-null-assertion': 'off',
+
   // https://typescript-eslint.io/rules/no-useless-constructor/
   'no-useless-constructor': 'off',
   '@typescript-eslint/no-useless-constructor': 'off',
@@ -197,6 +201,9 @@ export const TYPESCRIPT_RULES: Linter.RulesRecord = {
 
   // https://typescript-eslint.io/rules/no-unsafe-member-access/
   '@typescript-eslint/no-unsafe-member-access': 'off',
+
+  // https://typescript-eslint.io/rules/non-nullable-type-assertion-style/
+  '@typescript-eslint/non-nullable-type-assertion-style': 'error',
 
   // https://typescript-eslint.io/rules/prefer-for-of/
   '@typescript-eslint/prefer-for-of': 'off',
@@ -260,7 +267,6 @@ export const TYPESCRIPT_RULES: Linter.RulesRecord = {
   '@typescript-eslint/no-namespace': 'error',
   '@typescript-eslint/no-non-null-asserted-nullish-coalescing': 'error',
   '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
-  '@typescript-eslint/no-non-null-assertion': 'error',
   '@typescript-eslint/no-redundant-type-constituents': 'error',
   '@typescript-eslint/no-require-imports': 'error',
   'no-restricted-imports': 'off',
@@ -293,7 +299,6 @@ export const TYPESCRIPT_RULES: Linter.RulesRecord = {
   '@typescript-eslint/no-use-before-define': 'error',
   '@typescript-eslint/no-useless-empty-export': 'error',
   '@typescript-eslint/no-wrapper-object-types': 'error',
-  '@typescript-eslint/non-nullable-type-assertion-style': 'error',
   'no-throw-literal': 'off',
   '@typescript-eslint/only-throw-error': 'error',
   '@typescript-eslint/parameter-properties': 'error',
