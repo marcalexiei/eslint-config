@@ -17,6 +17,23 @@ describe('generic', () => {
   });
 });
 
+describe('import', () => {
+  it('throws error', async () => {
+    const result = await eslint.lintFiles(['./fixtures/import']);
+
+    assert.strictEqual(result.length, 1);
+
+    const [firstFile] = result;
+
+    assert.strictEqual(firstFile.errorCount, 1);
+
+    const [importOrderError] = firstFile.messages;
+
+    assert.strictEqual(importOrderError.ruleId, 'import-x/order');
+    assert.strictEqual(importOrderError.messageId, 'noLineWithinGroup');
+  });
+});
+
 describe('import/no-cycle', () => {
   it('throw error', async () => {
     const result = await eslint.lintFiles(['./fixtures/import-no-cycle']);
@@ -37,9 +54,9 @@ describe('import/no-cycle', () => {
   });
 });
 
-describe('type-imports', () => {
+describe('import-type', () => {
   it('throw error', async () => {
-    const result = await eslint.lintFiles(['./fixtures/type-imports']);
+    const result = await eslint.lintFiles(['./fixtures/import-type']);
 
     const fileWithErrors = result.filter((el) => el.errorCount > 0);
 

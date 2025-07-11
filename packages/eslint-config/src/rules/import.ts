@@ -276,7 +276,7 @@ export const IMPORT_RULES: Linter.Config<PluginRulesConfig>['rules'] = {
     'error',
     {
       groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
-      'newlines-between': 'always-and-inside-groups',
+      'newlines-between': 'always',
     },
   ],
 };
