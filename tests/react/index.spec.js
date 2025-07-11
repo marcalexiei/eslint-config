@@ -63,9 +63,6 @@ describe('display-name', () => {
     const [message] = fileMessages;
     assert.strictEqual(message.ruleId, 'react/display-name');
     assert.strictEqual(message.severity, 2);
-    assert.strictEqual(
-      message.message,
-      'Component definition is missing display name',
-    );
+    assert.strictEqual(message.messageId, 'noDisplayName');
   });
 });
