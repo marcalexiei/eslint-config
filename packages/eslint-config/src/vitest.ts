@@ -2,13 +2,14 @@ import type { Linter, ESLint } from 'eslint';
 import eslintPluginVitest from '@vitest/eslint-plugin';
 
 import type { PluginRulesRemapper } from './utils/plugin-rules-mapper.js';
+import { ALL_EXTENSIONS } from './utils/extensions.js';
 
 type PluginRules = Partial<(typeof eslintPluginVitest)['rules']>;
 type PluginRulesConfig = PluginRulesRemapper<'vitest', PluginRules>;
 
 const vitestConfig: Linter.Config<PluginRulesConfig> = {
   name: '@marcalexiei/eslint-config/vitest',
-  files: ['tests/**'],
+  files: [`**/*.{test,spec}.${ALL_EXTENSIONS}`],
   plugins: { vitest: eslintPluginVitest as unknown as ESLint.Plugin },
   rules: {
     ...eslintPluginVitest.configs.recommended.rules,
