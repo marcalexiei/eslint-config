@@ -4,8 +4,8 @@ import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescrip
 
 import {
   ALL_EXTENSIONS,
-  TSX_EXTENSIONS,
-  TS_EXTENSIONS,
+  getTSExtensions,
+  getTSXExtensions,
 } from './utils/extensions.js';
 import { BEST_PRACTICES_RULES } from './rules/best-practices.js';
 import { ERROR_RULES } from './rules/errors.js';
@@ -35,7 +35,10 @@ const baseConfig: Linter.Config = {
     'import-x/extensions': ALL_EXTENSIONS,
     'import-x/external-module-folders': ['node_modules', 'node_modules/@types'],
     'import-x/parsers': {
-      '@typescript-eslint/parser': [...TS_EXTENSIONS, ...TSX_EXTENSIONS],
+      '@typescript-eslint/parser': [
+        ...getTSExtensions({ mode: 'main' }),
+        ...getTSXExtensions(),
+      ],
     },
   },
   rules: {

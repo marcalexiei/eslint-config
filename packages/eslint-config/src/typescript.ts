@@ -2,10 +2,21 @@ import tseslint from 'typescript-eslint';
 import type { Linter, ESLint } from 'eslint';
 
 import { TYPESCRIPT_RULES } from './rules/typescript.js';
+import {
+  createExtensionMinimatch,
+  getTSExtensions,
+  getTSXExtensions,
+} from './utils/extensions.js';
 
 const typescriptConfig: Linter.Config = {
   name: '@marcalexiei/eslint-config/typescript',
-  files: ['**/*.ts', '**/*.tsx'],
+  files: [
+    `**/*.${createExtensionMinimatch([
+      ...getTSExtensions({ mode: 'main' }),
+      //
+      ...getTSXExtensions(),
+    ])}`,
+  ],
   languageOptions: {
     parser: tseslint.parser as Linter.Parser,
     parserOptions: { sourceType: 'module' },

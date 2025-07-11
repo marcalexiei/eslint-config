@@ -1,26 +1,54 @@
-export const JS_EXTENSIONS = ['.js', '.cjs', '.mjs'] as const;
+type Extension = `.${string}`;
 
-export const TS_EXTENSIONS = ['.ts', '.cts', '.mts'] as const;
+export function createExtensionMinimatch(extensions: ReadonlyArray<Extension>) {
+  return `{${extensions.map((it) => it.slice(1)).join(',')}}`;
+}
 
 // ================================================
 
-export const JSX_EXTENSIONS = ['.jsx'] as const;
+interface Options {
+  mode: 'main' | 'full';
+}
 
-export const TSX_EXTENSIONS = ['.tsx'] as const;
+export function getJSExtensions(options: Options): Array<Extension> {
+  const { mode } = options;
+
+  const list: Array<`.${string}`> = ['.js'];
+  if (mode === 'full') list.push('.cjs', '.mjs');
+
+  return list;
+}
+
+export function getJSXExtensions(): Array<Extension> {
+  const list: Array<`.${string}`> = ['.tsx'];
+  return list;
+}
+
+// ================================================
+
+export function getTSExtensions(options: Options): Array<Extension> {
+  const { mode } = options;
+
+  const list: Array<`.${string}`> = ['.ts'];
+  if (mode === 'full') list.push('.cts', '.mts');
+
+  return list;
+}
+
+export function getTSXExtensions(): Array<Extension> {
+  const list: Array<`.${string}`> = ['.tsx'];
+  return list;
+}
 
 // ================================================
 
 export const ALL_EXTENSIONS = [
-  ...TS_EXTENSIONS,
-  ...JS_EXTENSIONS,
-  ...JSX_EXTENSIONS,
-  ...TSX_EXTENSIONS,
+  ...getJSExtensions({ mode: 'full' }),
+  ...getTSExtensions({ mode: 'full' }),
+  ...getJSXExtensions(),
+  ...getTSXExtensions(),
 ];
 
 // ================================================
 
-function createMinimatchFrom(extensionList: Array<`.${string}`>) {
-  return `**/*.{${extensionList.map((it) => it.slice(1)).join(',')}}`;
-}
-
-export const ALL_JSX_EXTENSIONS_MINIMATCH = createMinimatchFrom(ALL_EXTENSIONS);
+export const ALL_EXTENSIONS_MINIMATCH = `**/*.${createExtensionMinimatch(ALL_EXTENSIONS)}`;
