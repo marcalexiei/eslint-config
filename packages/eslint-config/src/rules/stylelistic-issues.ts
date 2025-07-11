@@ -93,22 +93,17 @@ export const STYLISTIC_ISSUES_RULES: Partial<ESLintRules> = {
     {
       selector: 'ForInStatement',
       message:
-        'for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array.',
-    },
-    {
-      selector: 'ForOfStatement',
-      message:
-        'iterators/generators require regenerator-runtime, which is too heavyweight for this guide to allow them. Separately, loops should be avoided in favor of array iterations.',
+        'for...in loops iterate over the prototype chain. Use Object.keys/values/entries instead.',
     },
     {
       selector: 'LabeledStatement',
       message:
-        'Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.',
+        'Labels are like GOTO; avoid them for clearer, maintainable code.',
     },
     {
       selector: 'WithStatement',
       message:
-        '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.',
+        '`with` is disallowed in strict mode and leads to unpredictable behavior.',
     },
   ],
 
