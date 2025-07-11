@@ -1,5 +1,13 @@
 # @marcalexiei/eslint-config
 
+## 2.0.1
+
+### Patch Changes
+
+- [`06d6e73`](https://github.com/marcalexiei/eslint-config/commit/06d6e7349f9b95f6b70188c278aa7607235851fc) Thanks [@marcalexiei](https://github.com/marcalexiei)! - fix(stylelistic-issues): update configuration to modern standard
+
+- [`15a3fe7`](https://github.com/marcalexiei/eslint-config/commit/15a3fe76520e5f29bd046bf2d8b26e43d68b43c8) Thanks [@marcalexiei](https://github.com/marcalexiei)! - fix(typescript): resolve conflicts between `non-nullable-type-assertion`
+
 ## 2.0.0
 
 ### Major Changes
