@@ -1,5 +1,11 @@
 # @marcalexiei/eslint-config
 
+## 2.0.3
+
+### Patch Changes
+
+- [`fd9bb14`](https://github.com/marcalexiei/eslint-config/commit/fd9bb144fae4f6686547769064cbb4f35e6bb274) Thanks [@marcalexiei](https://github.com/marcalexiei)! - fix: consistent `files` minimatch management
+
 ## 2.0.2
 
 ### Patch Changes
