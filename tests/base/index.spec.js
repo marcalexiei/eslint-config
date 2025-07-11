@@ -31,3 +31,20 @@ describe('generic', () => {
     );
   });
 });
+
+describe('import', () => {
+  it('throws error', async () => {
+    const result = await eslint.lintFiles(['./fixtures/import']);
+
+    assert.strictEqual(result.length, 1);
+
+    const [firstFile] = result;
+
+    assert.strictEqual(firstFile.errorCount, 1);
+
+    const [importOrderError] = firstFile.messages;
+
+    assert.strictEqual(importOrderError.ruleId, 'import-x/order');
+    assert.strictEqual(importOrderError.messageId, 'noLineWithinGroup');
+  });
+});
