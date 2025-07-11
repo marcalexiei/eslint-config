@@ -1,5 +1,11 @@
 # @marcalexiei/eslint-config
 
+## 2.0.2
+
+### Patch Changes
+
+- [`0d04bc0`](https://github.com/marcalexiei/eslint-config/commit/0d04bc0e045c7b156991177675ce1c39fbc736e2) Thanks [@marcalexiei](https://github.com/marcalexiei)! - fix(vitest): improve `files` match
+
 ## 2.0.1
 
 ### Patch Changes
