@@ -1,11 +1,11 @@
 import type { Linter, ESLint } from 'eslint';
 import eslintPluginVitest from '@vitest/eslint-plugin';
 
-import type { PluginRulesRemapper } from './utils/plugin-rules-mapper.js';
+import type { PluginRulesRemapper } from '../_utils/plugin-rules-mapper.js';
 import {
   ALL_EXTENSIONS,
   createExtensionMinimatch,
-} from './utils/extensions.js';
+} from '../_utils/extensions.js';
 
 type PluginRules = Partial<(typeof eslintPluginVitest)['rules']>;
 type PluginRulesConfig = PluginRulesRemapper<'vitest', PluginRules>;

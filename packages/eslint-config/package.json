@@ -21,24 +21,24 @@
   "license": "MIT",
   "exports": {
     "./base": {
-      "types": "./dist/base.d.ts",
-      "default": "./dist/base.js"
+      "types": "./dist/base/index.d.ts",
+      "default": "./dist/base/index.js"
     },
     "./react": {
-      "types": "./dist/react.d.ts",
-      "default": "./dist/react.js"
+      "types": "./dist/react/index.d.ts",
+      "default": "./dist/react/index.js"
     },
     "./react-hooks": {
-      "types": "./dist/react-hooks.d.ts",
-      "default": "./dist/react-hooks.js"
+      "types": "./dist/react-hooks/index.d.ts",
+      "default": "./dist/react-hooks/index.js"
     },
     "./typescript": {
-      "types": "./dist/typescript.d.ts",
-      "default": "./dist/typescript.js"
+      "types": "./dist/typescript/index.d.ts",
+      "default": "./dist/typescript/index.js"
     },
     "./vitest": {
-      "types": "./dist/vitest.d.ts",
-      "default": "./dist/vitest.js"
+      "types": "./dist/vitest/index.d.ts",
+      "default": "./dist/vitest/index.js"
     }
   },
   "files": [

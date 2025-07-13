@@ -6,7 +6,8 @@ import {
   ALL_EXTENSIONS,
   getTSExtensions,
   getTSXExtensions,
-} from './utils/extensions.js';
+} from '../_utils/extensions.js';
+
 import { BEST_PRACTICES_RULES } from './rules/best-practices.js';
 import { ERROR_RULES } from './rules/errors.js';
 import { ES6_RULES } from './rules/es6.js';

@@ -1,7 +1,7 @@
 import type { Linter } from 'eslint';
 import reactPlugin from 'eslint-plugin-react';
 
-import { ALL_EXTENSIONS_MINIMATCH } from './utils/extensions.js';
+import { ALL_EXTENSIONS_MINIMATCH } from '../_utils/extensions.js';
 
 const reactConfig: Linter.Config = {
   name: '@marcalexiei/eslint-config/react',

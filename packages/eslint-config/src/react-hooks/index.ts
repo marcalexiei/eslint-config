@@ -1,7 +1,7 @@
 import type { Linter } from 'eslint';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 
-import { ALL_EXTENSIONS_MINIMATCH } from './utils/extensions.js';
+import { ALL_EXTENSIONS_MINIMATCH } from '../_utils/extensions.js';
 
 const reactHooksConfig: Linter.Config = {
   name: '@marcalexiei/eslint-config/react-hooks',

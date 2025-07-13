@@ -1,6 +1,6 @@
 import type { ESLintRules } from 'eslint/rules';
 
-import { PREFER_DESTRUCTURING_RULE_SETTING } from './settings/prefer-destructuring.js';
+import { PREFER_DESTRUCTURING_RULE_SETTING } from '../../_rule-settings/prefer-destructuring.js';
 
 export const ES6_RULES: Partial<ESLintRules> = {
   // https://eslint.org/docs/rules/arrow-body-style

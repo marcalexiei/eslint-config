@@ -1,6 +1,6 @@
 import type { Linter } from 'eslint';
 
-import { PREFER_DESTRUCTURING_RULE_SETTING } from './settings/prefer-destructuring.js';
+import { PREFER_DESTRUCTURING_RULE_SETTING } from '../_rule-settings/prefer-destructuring.js';
 
 /**
  * @see https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin/docs/rules
@@ -12,7 +12,6 @@ import { PREFER_DESTRUCTURING_RULE_SETTING } from './settings/prefer-destructuri
  *
  * @warning If you need to customize a newly added rule move it into
  *          the `customized-rules` region
- *
  */
 export const TYPESCRIPT_RULES: Linter.RulesRecord = {
   // #region disabled eslint rules that are handled by ts
