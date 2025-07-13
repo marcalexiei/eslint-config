@@ -223,9 +223,6 @@ export const BEST_PRACTICES_RULES: Partial<ESLintRules> = {
   // https://eslint.org/docs/rules/no-return-assign
   'no-return-assign': ['error', 'always'],
 
-  // https://eslint.org/docs/rules/no-return-await
-  'no-return-await': ['error'],
-
   // https://eslint.org/docs/rules/no-script-url
   'no-script-url': 'error',
 
