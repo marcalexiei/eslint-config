@@ -3,7 +3,7 @@ import { CONSTANT_VARIABLE, type MyModel } from './models';
 // below there is an error, this import should be a type import
 import { API } from './models2';
 
-const instance: MyModel | API = {} as MyModel;
+const instance: MyModel | API = { list: [] };
 
 Object.keys(instance);
 

@@ -21,6 +21,7 @@ The following presets are available:
 - `typescript` → `"@marcalexiei/eslint-config/typescript"`
 - `react` → `"@marcalexiei/eslint-config/react"`
 - `react-hooks` → `"@marcalexiei/eslint-config/react-hooks"`
+- `vitest` → `"@marcalexiei/eslint-config/vitest"`
 
 ## Install
 
