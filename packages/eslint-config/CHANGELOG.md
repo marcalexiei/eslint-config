@@ -1,5 +1,13 @@
 # @marcalexiei/eslint-config
 
+## 2.1.0
+
+### Minor Changes
+
+- [#45](https://github.com/marcalexiei/eslint-config/pull/45) [`07f14c0`](https://github.com/marcalexiei/eslint-config/commit/07f14c0e7d83c8789bb77050c85d4f9f79e98c99) Thanks [@marcalexiei](https://github.com/marcalexiei)! - feat(typescript): refine rules config
+
+- [#48](https://github.com/marcalexiei/eslint-config/pull/48) [`ace386a`](https://github.com/marcalexiei/eslint-config/commit/ace386a582b9e8c8a4dfe03adbae4ffcaf8fa274) Thanks [@marcalexiei](https://github.com/marcalexiei)! - feat(base): restructure rules settings following new eslint structure
+
 ## 2.0.3
 
 ### Patch Changes
