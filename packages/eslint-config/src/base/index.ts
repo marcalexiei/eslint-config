@@ -8,13 +8,10 @@ import {
   getTSXExtensions,
 } from '../_utils/extensions.js';
 
-import { BEST_PRACTICES_RULES } from './rules/best-practices.js';
-import { ERROR_RULES } from './rules/errors.js';
-import { ES6_RULES } from './rules/es6.js';
-import { IMPORT_RULES } from './rules/import.js';
-import { STRICT_RULES } from './rules/strict.js';
-import { STYLISTIC_ISSUES_RULES } from './rules/stylelistic-issues.js';
-import { VARIABLES_RULES } from './rules/variables.js';
+import { RULES_CORE_PROBLEMS } from './rules-core-problems.js';
+import { RULES_CORE_LAYOUT } from './rules-core-layout.js';
+import { RULES_CORE_SUGGESTION } from './rules-core-suggestions.js';
+import { RULES_PLUGIN_IMPORT } from './rules-plugin-import.js';
 
 const baseConfig: Linter.Config = {
   name: '@marcalexiei/eslint-config/base',
@@ -43,13 +40,10 @@ const baseConfig: Linter.Config = {
     },
   },
   rules: {
-    ...BEST_PRACTICES_RULES,
-    ...ERROR_RULES,
-    ...ES6_RULES,
-    ...IMPORT_RULES,
-    ...STRICT_RULES,
-    ...STYLISTIC_ISSUES_RULES,
-    ...VARIABLES_RULES,
+    ...RULES_CORE_PROBLEMS,
+    ...RULES_CORE_SUGGESTION,
+    ...RULES_CORE_LAYOUT,
+    ...RULES_PLUGIN_IMPORT,
   },
 };
 

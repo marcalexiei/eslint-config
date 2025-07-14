@@ -2,7 +2,9 @@ import type { Linter } from 'eslint';
 import type { ESLintRules } from 'eslint/rules';
 
 import { PREFER_DESTRUCTURING_RULE_SETTING } from '../_rule-settings/prefer-destructuring.js';
+import { NO_EMPTY_FUNCTIONS_RULE_SETTING } from '../_rule-settings/no-empty-function.js';
 import type { PluginRulesRemapper } from '../_utils/plugin-rules-mapper.js';
+import type { RemoveIndexSignature } from '../_utils/remove-index-signature.js';
 /**
  * This is not very polished but typescript eslint doesn't expose rules types
  * @see TYPESCRIPT_RULES_CONFIG
@@ -65,24 +67,19 @@ const ESLINT_RULES_HANDLED_BY_TS = {
 } satisfies Linter.RulesRecord;
 
 const ESLINT_RULES_HANDLED_BY_TS_OPTIONS = {
+  // Handled by "allowUnreachableCode": false tsconfig options
+  // https://typescript-eslint.io/rules/consistent-return/
+  'consistent-return': 'off',
+
+  // Handled by `strict` or `noImplicitThis` ts options
+  // https://typescript-eslint.io/rules/no-invalid-this/
+  // https://eslint.org/docs/rules/no-invalid-this
+  'no-invalid-this': 'off',
+
   // Replaced by "allowUnreachableCode": false tsconfig options
   // https://eslint.org/docs/rules/no-unreachable
   'no-unreachable': 'off', // ts(7027)
-
-  // Replaced by "allowUnreachableCode": false tsconfig options
-  // https://typescript-eslint.io/rules/consistent-return/
-  'consistent-return': 'off',
 } satisfies Linter.RulesRecord;
-
-type RemoveIndexSignature<T> = {
-  [K in keyof T as string extends K
-    ? never
-    : number extends K
-      ? never
-      : symbol extends K
-        ? never
-        : K]: T[K];
-};
 
 // Get all eslint rules keys
 // `ESLintRules` extends `Linter.RulesRecord` which has string as index signature
@@ -99,17 +96,17 @@ type RulesNameBlocklist =
   | keyof typeof ESLINT_RULES_HANDLED_BY_TS
 
   // ⬇️ deprecated rules ⬇️
-  // // https://typescript-eslint.io/rules/no-var-requires
+  // https://typescript-eslint.io/rules/no-var-requires
   | 'no-var-requires'
-  // // https://typescript-eslint.io/rules/prefer-ts-expect-error
+  // https://typescript-eslint.io/rules/prefer-ts-expect-error
   | 'prefer-ts-expect-error'
-  // // https://typescript-eslint.io/rules/sort-type-constituents
+  // https://typescript-eslint.io/rules/sort-type-constituents
   | 'sort-type-constituents'
-  // // https://typescript-eslint.io/rules/typedef
+  // https://typescript-eslint.io/rules/typedef
   | 'typedef'
-  // // https://typescript-eslint.io/rules/no-type-alias
+  // https://typescript-eslint.io/rules/no-type-alias
   | 'no-type-alias'
-  // // https://typescript-eslint.io/rules/no-loss-of-precision
+  // https://typescript-eslint.io/rules/no-loss-of-precision
   | 'no-loss-of-precision'
   // https://typescript-eslint.io/rules/no-empty-interface/
   | 'no-empty-interface';
@@ -121,6 +118,7 @@ type PluginRulesConfig = PluginRulesRemapper<
   '@typescript-eslint',
   PluginRules
 > &
+  // Core rules can only be disabled here
   Partial<Record<KnownEslintRulesKeys, 'off'>>;
 
 /**
@@ -211,6 +209,7 @@ const TYPESCRIPT_RULES_CONFIG: PluginRulesConfig = {
   '@typescript-eslint/method-signature-style': ['error', 'property'],
 
   // https://typescript-eslint.io/rules/naming-convention/
+  camelcase: 'off',
   '@typescript-eslint/naming-convention': [
     'error',
     {
@@ -283,11 +282,9 @@ const TYPESCRIPT_RULES_CONFIG: PluginRulesConfig = {
   // https://typescript-eslint.io/rules/no-dynamic-delete/
   '@typescript-eslint/no-dynamic-delete': 'error',
 
-  // There a lot of errors in test files,
-  // consider to export another config to disable this rule in those scenarios
   // https://typescript-eslint.io/rules/no-empty-function/
   'no-empty-function': 'off',
-  '@typescript-eslint/no-empty-function': ['off', { allow: ['constructors'] }],
+  '@typescript-eslint/no-empty-function': NO_EMPTY_FUNCTIONS_RULE_SETTING,
 
   // https://typescript-eslint.io/rules/no-empty-object-type/
   '@typescript-eslint/no-empty-object-type': 'error',
@@ -319,10 +316,6 @@ const TYPESCRIPT_RULES_CONFIG: PluginRulesConfig = {
 
   // https://typescript-eslint.io/rules/no-inferrable-types/
   '@typescript-eslint/no-inferrable-types': 'error',
-
-  // https://typescript-eslint.io/rules/no-invalid-this/
-  'no-invalid-this': 'off',
-  '@typescript-eslint/no-invalid-this': 'error',
 
   // https://typescript-eslint.io/rules/no-invalid-void-type/
   '@typescript-eslint/no-invalid-void-type': 'error',
