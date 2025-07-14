@@ -432,7 +432,7 @@ const TYPESCRIPT_RULES_CONFIG: PluginRulesConfig = {
   '@typescript-eslint/no-unsafe-return': 'error',
 
   // https://typescript-eslint.io/rules/no-unsafe-type-assertion/
-  '@typescript-eslint/no-unsafe-type-assertion': 'error',
+  '@typescript-eslint/no-unsafe-type-assertion': 'off',
 
   // https://typescript-eslint.io/rules/no-unsafe-unary-minus/
   '@typescript-eslint/no-unsafe-unary-minus': 'error',
