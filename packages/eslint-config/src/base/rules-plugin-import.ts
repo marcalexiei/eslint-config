@@ -1,12 +1,12 @@
 import type { Linter } from 'eslint';
 import type eslintPluginImportX from 'eslint-plugin-import-x';
 
-import type { PluginRulesRemapper } from '../../_utils/plugin-rules-mapper.js';
+import type { PluginRulesRemapper } from '../_utils/plugin-rules-mapper.js';
 
 type PluginRules = Partial<(typeof eslintPluginImportX)['rules']>;
 type PluginRulesConfig = PluginRulesRemapper<'import-x', PluginRules>;
 
-export const IMPORT_RULES: Linter.Config<PluginRulesConfig>['rules'] = {
+export const RULES_PLUGIN_IMPORT: Linter.Config<PluginRulesConfig>['rules'] = {
   // https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/no-unresolved.md
   'import-x/no-unresolved': ['error', { commonjs: true }],
 
