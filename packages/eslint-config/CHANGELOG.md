@@ -1,5 +1,11 @@
 # @marcalexiei/eslint-config
 
+## 2.1.1
+
+### Patch Changes
+
+- [`842875a`](https://github.com/marcalexiei/eslint-config/commit/842875ab2fc7a85cea6e5080ca8967a959965d1c) Thanks [@marcalexiei](https://github.com/marcalexiei)! - fix(typescript): disable `no-unsafe-type-assertion`
+
 ## 2.1.0
 
 ### Minor Changes
