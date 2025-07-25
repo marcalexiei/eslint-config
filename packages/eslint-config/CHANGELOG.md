@@ -1,5 +1,11 @@
 # @marcalexiei/eslint-config
 
+## 2.2.0
+
+### Minor Changes
+
+- [`93dc467`](https://github.com/marcalexiei/eslint-config/commit/93dc46782db1d5abe04a5fe650cefab40adc5b76) Thanks [@marcalexiei](https://github.com/marcalexiei)! - feat(base): enable `no-negated-condition`
+
 ## 2.1.1
 
 ### Patch Changes
