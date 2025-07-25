@@ -379,7 +379,7 @@ export const RULES_CORE_SUGGESTION: Pick<
   'no-multi-str': 'error',
 
   // https://eslint.org/docs/latest/rules/no-negated-condition
-  'no-negated-condition': 'off',
+  'no-negated-condition': 'error',
 
   // https://eslint.org/docs/latest/rules/no-nested-ternary
   'no-nested-ternary': 'error',
