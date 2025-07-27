@@ -503,11 +503,6 @@ export const RULES_CORE_SUGGESTION: Pick<
       message:
         'Labels are like GOTO; avoid them for clearer, maintainable code.',
     },
-    {
-      selector: 'WithStatement',
-      message:
-        '`with` is disallowed in strict mode and leads to unpredictable behavior.',
-    },
   ],
 
   // https://eslint.org/docs/rules/no-return-assign
