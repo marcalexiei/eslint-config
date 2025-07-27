@@ -15,7 +15,6 @@ const vitestConfig: Linter.Config<PluginRulesConfig> = {
   files: [`**/*.{test,spec}.${createExtensionMinimatch(ALL_EXTENSIONS)}`],
   plugins: { vitest: eslintPluginVitest as unknown as ESLint.Plugin },
   rules: {
-    ...eslintPluginVitest.configs.recommended.rules,
     'vitest/consistent-test-filename': [
       'error',
       {
@@ -25,10 +24,18 @@ const vitestConfig: Linter.Config<PluginRulesConfig> = {
     ],
     'vitest/consistent-test-it': 'error',
     'vitest/consistent-vitest-vi': 'error',
-    'vitest/max-nested-describe': ['error', { max: 2 }],
+    'vitest/expect-expect': 'error',
     'vitest/max-expects': ['error', { max: 5 }],
+    'vitest/max-nested-describe': ['error', { max: 2 }],
+    'vitest/no-commented-out-tests': 'error',
+    'vitest/no-identical-title': 'error',
+    'vitest/no-import-node-test': 'error',
     'vitest/prefer-importing-vitest-globals': 'error',
+    'vitest/require-local-test-context-for-concurrent-snapshots': 'error',
     'vitest/require-mock-type-parameters': 'error',
+    'vitest/valid-describe-callback': 'error',
+    'vitest/valid-expect': 'error',
+    'vitest/valid-title': 'error',
   },
 };
 export default vitestConfig;
