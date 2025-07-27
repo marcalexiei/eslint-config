@@ -1,5 +1,29 @@
 # @marcalexiei/eslint-config
 
+## 3.0.0
+
+### Major Changes
+
+- [`9a7c1c7`](https://github.com/marcalexiei/eslint-config/commit/9a7c1c7eac0eadf78fa5a692af0bc060cc710280) Thanks [@marcalexiei](https://github.com/marcalexiei)! - feat!: replace `eslint-plugin-react` with `eslint-plugin-react-{x,hooks-extra}`
+
+  Refines rules of react and react-hooks by using <https://eslint-react.xyz>.
+  Notable changes:
+  - enforce `React` namespace import
+  - configure relevant rules from core plugin (<https://eslint-react.xyz/docs/rules/overview#x-rules>)
+  - add more check on hooks (<https://eslint-react.xyz/docs/rules/overview#hooks-extra-rules>)
+
+### Minor Changes
+
+- [`93dc467`](https://github.com/marcalexiei/eslint-config/commit/93dc46782db1d5abe04a5fe650cefab40adc5b76) Thanks [@marcalexiei](https://github.com/marcalexiei)! - feat(base): enable `no-negated-condition`
+
+### Patch Changes
+
+- [`bb93172`](https://github.com/marcalexiei/eslint-config/commit/bb93172ba975631623bde7568a8f17536ff82cff) Thanks [@marcalexiei](https://github.com/marcalexiei)! - fix(base): disable resolution for commonjs modules
+
+- [`013f172`](https://github.com/marcalexiei/eslint-config/commit/013f172b2db58ac12232d1bad847e64407e936eb) Thanks [@marcalexiei](https://github.com/marcalexiei)! - fix(base): remove `with` from `no-restricted-syntax`
+
+- [`3362a72`](https://github.com/marcalexiei/eslint-config/commit/3362a72bf080eed4fbfa6accaeae22fdd15ce5e8) Thanks [@marcalexiei](https://github.com/marcalexiei)! - fix(base): refine label related rules
+
 ## 2.1.1
 
 ### Patch Changes
