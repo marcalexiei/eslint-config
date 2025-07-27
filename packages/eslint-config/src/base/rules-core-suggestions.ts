@@ -498,11 +498,6 @@ export const RULES_CORE_SUGGESTION: Pick<
       message:
         'for...in loops iterate over the prototype chain. Use Object.keys/values/entries instead.',
     },
-    {
-      selector: 'LabeledStatement',
-      message:
-        'Labels are like GOTO; avoid them for clearer, maintainable code.',
-    },
   ],
 
   // https://eslint.org/docs/rules/no-return-assign
@@ -541,8 +536,9 @@ export const RULES_CORE_SUGGESTION: Pick<
   // https://eslint.org/docs/rules/no-unused-expressions
   'no-unused-expressions': 'error',
 
+  // no need for this since `no-labels` is enabled
   // https://eslint.org/docs/rules/no-unused-labels
-  'no-unused-labels': 'error',
+  'no-unused-labels': 'off',
 
   // https://eslint.org/docs/rules/no-useless-call
   'no-useless-call': 'error',
