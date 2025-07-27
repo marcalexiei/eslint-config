@@ -3,10 +3,17 @@ import type eslintPluginImportX from 'eslint-plugin-import-x';
 
 import type { PluginRulesRemapper } from '../_utils/plugin-rules-mapper.js';
 
-type PluginRules = Partial<(typeof eslintPluginImportX)['rules']>;
+type PluginRules = Omit<
+  (typeof eslintPluginImportX)['rules'],
+  // https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/prefer-namespace-import.md
+  | 'prefer-namespace-import'
+
+  // https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/no-rename-default.md
+  | 'no-rename-default'
+>;
 type PluginRulesConfig = PluginRulesRemapper<'import-x', PluginRules>;
 
-export const RULES_PLUGIN_IMPORT: Linter.Config<PluginRulesConfig>['rules'] = {
+export const RULES_PLUGIN_IMPORT: Linter.Config['rules'] = {
   // https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/no-unresolved.md
   'import-x/no-unresolved': ['error'],
 
@@ -38,6 +45,9 @@ export const RULES_PLUGIN_IMPORT: Linter.Config<PluginRulesConfig>['rules'] = {
   // disallow use of jsdoc-marked-deprecated imports
   // https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/no-deprecated.md
   'import-x/no-deprecated': 'off',
+
+  // https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/no-empty-named-blocks.md
+  'import-x/no-empty-named-blocks': 'error',
 
   // Forbid the use of extraneous packages
   // https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/no-extraneous-dependencies.md
@@ -279,4 +289,4 @@ export const RULES_PLUGIN_IMPORT: Linter.Config<PluginRulesConfig>['rules'] = {
       'newlines-between': 'always',
     },
   ],
-};
+} satisfies PluginRulesConfig;
