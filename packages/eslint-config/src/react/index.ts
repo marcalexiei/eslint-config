@@ -1,26 +1,17 @@
-import type { Linter } from 'eslint';
-import reactPlugin from 'eslint-plugin-react';
+import type { ESLint, Linter } from 'eslint';
+import eslintReactPlugin from 'eslint-plugin-react-x';
 
 import { ALL_EXTENSIONS_MINIMATCH } from '../_utils/extensions.js';
+
+import { REACT_RULES } from './rules.js';
 
 const reactConfig: Linter.Config = {
   name: '@marcalexiei/eslint-config/react',
   files: [ALL_EXTENSIONS_MINIMATCH],
-  ...reactPlugin.configs.flat.recommended,
-  rules: {
-    ...reactPlugin.configs.flat.recommended.rules,
-
-    // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-no-useless-fragment.md
-    'react/jsx-no-useless-fragment': 'error',
-    // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-object-type-as-default-prop.md
-    'react/no-object-type-as-default-prop': 'error',
+  plugins: {
+    'react-x': eslintReactPlugin as unknown as ESLint.Plugin,
   },
-  settings: {
-    react: {
-      pragma: 'React',
-      version: 'detect',
-    },
-  },
+  rules: REACT_RULES,
 };
 
 export default reactConfig;

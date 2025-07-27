@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import * as React from 'react';
 
 import type { MyModel } from './models';
 
@@ -11,7 +11,7 @@ interface TestComponentProps {
 export function TestComponent(props: TestComponentProps): React.JSX.Element {
   const { data } = props;
 
-  const [myState] = useState('something');
+  const [myState] = React.useState('something');
 
   return (
     <>

@@ -1,21 +1,21 @@
-import React, { useEffect, useMemo } from 'react';
+import * as React from 'react';
 
 interface HookComponentProps {
   boh?: string;
 }
 
-export function HookComponent(props: HookComponentProps): JSX.Element {
+export function HookComponent(props: HookComponentProps): React.JSX.Element {
   const { boh } = props;
 
-  useEffect(() => {
-    boh.trim();
+  React.useEffect(() => {
+    boh?.trim();
   }, []);
 
   if (!boh) {
     return <>react-hooks</>;
   }
 
-  const data = useMemo(() => boh.trim(), []);
+  const data = React.useMemo(() => boh.trim(), []);
 
   return <>Something: {data}</>;
 }

@@ -54,18 +54,22 @@
     "eslint": "^9.0.0",
     "eslint-import-resolver-typescript": "^4.0.0",
     "eslint-plugin-import-x": "^4.4.0",
-    "eslint-plugin-react": "^7.35.0",
     "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-hooks-extra": "^1.52.3",
+    "eslint-plugin-react-x": "^1.52.3",
     "typescript-eslint": "^8.0.0"
   },
   "peerDependenciesMeta": {
-    "eslint-plugin-react": {
+    "@vitest/eslint-plugin": {
       "optional": true
     },
     "eslint-plugin-react-hooks": {
       "optional": true
     },
-    "@vitest/eslint-plugin": {
+    "eslint-plugin-react-hooks-extra": {
+      "optional": true
+    },
+    "eslint-plugin-react-x": {
       "optional": true
     }
   },
@@ -77,7 +81,8 @@
     "eslint": "9.31.0",
     "eslint-import-resolver-typescript": "4.4.4",
     "eslint-plugin-import-x": "4.16.1",
-    "eslint-plugin-react": "7.37.5",
-    "eslint-plugin-react-hooks": "5.2.0"
+    "eslint-plugin-react-hooks": "5.2.0",
+    "eslint-plugin-react-hooks-extra": "1.52.3",
+    "eslint-plugin-react-x": "1.52.3"
   }
 }

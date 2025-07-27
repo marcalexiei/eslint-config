@@ -1,6 +1,7 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "jsx": "react" /* Specify what JSX code is generated. */
+    "moduleResolution": "node",
+    "jsx": "react-jsx"
   }
 }

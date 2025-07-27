@@ -26,19 +26,19 @@ describe('react-hooks', () => {
         ruleId: 'react-hooks/exhaustive-deps',
         severity: 2,
         message:
-          "React Hook useEffect has a missing dependency: 'boh'. Either include it or remove the dependency array.",
+          "React Hook React.useEffect has a missing dependency: 'boh'. Either include it or remove the dependency array.",
       },
       {
         ruleId: 'react-hooks/rules-of-hooks',
         severity: 2,
         message:
-          'React Hook "useMemo" is called conditionally. React Hooks must be called in the exact same order in every component render. Did you accidentally call a React Hook after an early return?',
+          'React Hook "React.useMemo" is called conditionally. React Hooks must be called in the exact same order in every component render. Did you accidentally call a React Hook after an early return?',
       },
       {
         ruleId: 'react-hooks/exhaustive-deps',
         severity: 2,
         message:
-          "React Hook useMemo has a missing dependency: 'boh'. Either include it or remove the dependency array.",
+          "React Hook React.useMemo has a missing dependency: 'boh'. Either include it or remove the dependency array.",
       },
     ];
 
@@ -61,8 +61,11 @@ describe('display-name', () => {
     assert.strictEqual(fileMessages.length, 1);
 
     const [message] = fileMessages;
-    assert.strictEqual(message.ruleId, 'react/display-name');
+    assert.strictEqual(
+      message.ruleId,
+      'react-x/no-missing-component-display-name',
+    );
     assert.strictEqual(message.severity, 2);
-    assert.strictEqual(message.messageId, 'noDisplayName');
+    assert.strictEqual(message.messageId, 'noMissingComponentDisplayName');
   });
 });
