@@ -104,7 +104,7 @@ export default [
 **Install instructions:**
 
 ```shell
-npm i --save-dev eslint @marcalexiei/eslint-config typescript typescript-eslint eslint-plugin-import-x eslint-import-resolver-typescript eslint-plugin-react-x  eslint-plugin-react-hooks eslint-plugin-react-hooks-extra
+npm i --save-dev eslint @marcalexiei/eslint-config typescript typescript-eslint eslint-plugin-import-x eslint-import-resolver-typescript eslint-plugin-react-x eslint-plugin-react-hooks eslint-plugin-react-hooks-extra
 ```
 
 **Configuration:**
