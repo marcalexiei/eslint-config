@@ -1,5 +1,11 @@
 # @marcalexiei/eslint-config
 
+## 3.0.1
+
+### Patch Changes
+
+- [`7ecf618`](https://github.com/marcalexiei/eslint-config/commit/7ecf618f278505e7a0574a6bab5fbc0451f55b23) Thanks [@marcalexiei](https://github.com/marcalexiei)! - docs(README): update badge style and add lint badge
+
 ## 3.0.0
 
 ### Major Changes
