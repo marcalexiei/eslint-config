@@ -2,16 +2,19 @@
 
 [![CI][CIBadge]][CIURL]
 [![Code style: prettier][CodeStyleBadge]][CodeStyleURL]
+[![Lint: eslint][lintBadge]][lintURL]
 [![npm version][npmVersionBadge]][npmVersionURL]
 [![issues][issuesBadge]][issuesURL]
 
-[CIBadge]: https://github.com/marcalexiei/eslint-config/actions/workflows/CI.yml/badge.svg
+[CIBadge]: https://img.shields.io/github/actions/workflow/status/marcalexiei/eslint-config/CI.yml?style=for-the-badge&logo=github&event=push
 [CIURL]: https://github.com/marcalexiei/eslint-config/actions/workflows/CI.yml/badge.svg
-[CodeStyleBadge]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg
+[CodeStyleBadge]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=for-the-badge&logo=prettier
 [CodeStyleURL]: https://prettier.io
-[npmVersionBadge]: https://img.shields.io/npm/v/@marcalexiei/eslint-config.svg?style=flat-square
+[npmVersionBadge]: https://img.shields.io/npm/v/@marcalexiei/eslint-config.svg?style=for-the-badge&logo=npm
+[lintBadge]: https://img.shields.io/badge/lint-eslint-3A33D1?logo=eslint&style=for-the-badge
+[lintURL]: https://eslint.org
 [npmVersionURL]: https://www.npmjs.com/package/@marcalexiei/eslint-config
-[issuesBadge]: https://img.shields.io/github/issues/marcalexiei/eslint-config.svg
+[issuesBadge]: https://img.shields.io/github/issues/marcalexiei/eslint-config.svg?style=for-the-badge
 [issuesURL]: https://github.com/marcalexiei/eslint-config/issues
 
 Provide ESLint sharable configurations.
