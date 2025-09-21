@@ -6,8 +6,8 @@
 [![npm version][npmVersionBadge]][npmVersionURL]
 [![issues][issuesBadge]][issuesURL]
 
-[CIBadge]: https://img.shields.io/github/actions/workflow/status/marcalexiei/eslint-config/CI.yml?style=for-the-badge&logo=github&event=push&label=CI
-[CIURL]: https://github.com/marcalexiei/eslint-config/actions/workflows/CI.yml/badge.svg
+[CIBadge]: https://img.shields.io/github/actions/workflow/status/marcalexiei/eslint-config/ci.yml?style=for-the-badge&logo=github&event=push&label=CI
+[CIURL]: https://github.com/marcalexiei/eslint-config/actions/workflows/ci.yml/badge.svg
 [CodeStyleBadge]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=for-the-badge&logo=prettier
 [CodeStyleURL]: https://prettier.io
 [npmVersionBadge]: https://img.shields.io/npm/v/@marcalexiei/eslint-config.svg?style=for-the-badge&logo=npm
