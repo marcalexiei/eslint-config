@@ -1,5 +1,11 @@
 # @marcalexiei/eslint-config
 
+## 3.1.1
+
+### Patch Changes
+
+- [#77](https://github.com/marcalexiei/eslint-config/pull/77) [`58b9106`](https://github.com/marcalexiei/eslint-config/commit/58b9106c2e6db4b1585e4dfbd2d4aaa0ed81b0e8) Thanks [@marcalexiei](https://github.com/marcalexiei)! - fix(react): improve rule configuration
+
 ## 3.1.0
 
 ### Minor Changes
