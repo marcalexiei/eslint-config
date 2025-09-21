@@ -1,5 +1,15 @@
 # @marcalexiei/eslint-config
 
+## 3.1.0
+
+### Minor Changes
+
+- [#67](https://github.com/marcalexiei/eslint-config/pull/67) [`48f3aa4`](https://github.com/marcalexiei/eslint-config/commit/48f3aa4f14acf804959556f6ead5880b5307e804) Thanks [@marcalexiei](https://github.com/marcalexiei)! - docs: use `defineConfig` from `eslint` in examples and code snippets
+
+### Patch Changes
+
+- [#69](https://github.com/marcalexiei/eslint-config/pull/69) [`40e17f6`](https://github.com/marcalexiei/eslint-config/commit/40e17f6331d67d2af82bcf01cffdcf2192073bfb) Thanks [@marcalexiei](https://github.com/marcalexiei)! - fix(react): use consistent type imports
+
 ## 3.0.1
 
 ### Patch Changes
