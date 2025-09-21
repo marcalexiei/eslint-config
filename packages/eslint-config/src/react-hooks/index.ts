@@ -1,4 +1,4 @@
-import type { ESLint, Linter } from 'eslint';
+import type { Linter } from 'eslint';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import reactHooksExtraPlugin from 'eslint-plugin-react-hooks-extra';
 
@@ -9,7 +9,7 @@ const reactHooksConfig: Linter.Config = {
   files: [ALL_EXTENSIONS_MINIMATCH],
   plugins: {
     'react-hooks': reactHooksPlugin,
-    'react-hooks-extra': reactHooksExtraPlugin as unknown as ESLint.Plugin,
+    'react-hooks-extra': reactHooksExtraPlugin,
   },
   rules: {
     'react-hooks/rules-of-hooks': 'error',
