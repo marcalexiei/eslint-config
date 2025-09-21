@@ -60,7 +60,7 @@ jobs:
           publish: 'pnpm release'
           setupGitUser: false
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
 
   on-ci-fail:
     name: 'Failure'
