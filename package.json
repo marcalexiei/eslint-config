@@ -28,7 +28,7 @@
   "prettier": "@marcalexiei/prettier-config",
   "devDependencies": {
     "@changesets/changelog-github": "0.5.1",
-    "@changesets/cli": "2.29.6",
+    "@changesets/cli": "2.29.7",
     "@commitlint/cli": "19.8.1",
     "@commitlint/config-conventional": "19.8.1",
     "@marcalexiei/prettier-config": "1.1.1",
