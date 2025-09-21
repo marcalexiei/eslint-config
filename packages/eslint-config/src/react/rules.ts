@@ -1,4 +1,4 @@
-import eslintReactPlugin from 'eslint-plugin-react-x';
+import type eslintReactPlugin from 'eslint-plugin-react-x';
 
 import type { PluginRulesRemapper } from '../_utils/plugin-rules-mapper.js';
 
