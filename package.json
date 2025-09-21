@@ -31,7 +31,7 @@
     "@changesets/cli": "2.29.6",
     "@commitlint/cli": "19.8.1",
     "@commitlint/config-conventional": "19.8.1",
-    "@marcalexiei/prettier-config": "1.1.1",
+    "@marcalexiei/prettier-config": "1.1.4",
     "@types/node": "24.3.0",
     "husky": "9.1.7",
     "prettier": "3.6.2",
