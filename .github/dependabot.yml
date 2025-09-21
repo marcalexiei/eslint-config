@@ -21,6 +21,8 @@ updates:
           - '@types/eslint__js'
           - 'typescript'
           - 'typescript-eslint'
+          - '@typescript-eslint/*'
+          - '@vitest/eslint-plugin'
 
       dev:
         dependency-type: 'development'
