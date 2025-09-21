@@ -1,8 +1,8 @@
+import { defineConfig } from 'eslint/config';
 import base from '@marcalexiei/eslint-config/base';
 import typescript from '@marcalexiei/eslint-config/typescript';
 
-/** @type {import('eslint').Linter.Config} */
-export default [
+export default defineConfig([
   base,
   typescript,
   {
@@ -12,4 +12,4 @@ export default [
       },
     },
   },
-];
+]);
