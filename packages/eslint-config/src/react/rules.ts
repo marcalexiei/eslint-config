@@ -1,9 +1,75 @@
-import type eslintReactPlugin from 'eslint-plugin-react-x';
+import type { Linter } from 'eslint';
 
-import type { PluginRulesRemapper } from '../_utils/plugin-rules-mapper.js';
+import type { PluginRuleNamesRemapper } from '../_utils/plugin-rules-mapper.js';
 
-type PluginRules = Omit<
-  (typeof eslintReactPlugin)['rules'],
+/** @see GET_RULES_NAME.md */
+type ReactXRules =
+  | 'avoid-shorthand-boolean'
+  | 'avoid-shorthand-fragment'
+  | 'no-access-state-in-setstate'
+  | 'no-array-index-key'
+  | 'no-children-count'
+  | 'no-children-for-each'
+  | 'no-children-map'
+  | 'no-children-only'
+  | 'no-children-prop'
+  | 'no-children-to-array'
+  | 'no-class-component'
+  | 'no-clone-element'
+  | 'no-comment-textnodes'
+  | 'no-complex-conditional-rendering'
+  | 'no-component-will-mount'
+  | 'no-component-will-receive-props'
+  | 'no-component-will-update'
+  | 'no-context-provider'
+  | 'no-create-ref'
+  | 'no-default-props'
+  | 'no-direct-mutation-state'
+  | 'no-duplicate-key'
+  | 'no-forward-ref'
+  | 'no-implicit-key'
+  | 'no-leaked-conditional-rendering'
+  | 'no-missing-component-display-name'
+  | 'no-missing-context-display-name'
+  | 'no-missing-key'
+  | 'no-misused-capture-owner-stack'
+  | 'no-nested-component-definitions'
+  | 'no-nested-lazy-component-declarations'
+  | 'no-prop-types'
+  | 'no-redundant-should-component-update'
+  | 'no-set-state-in-component-did-mount'
+  | 'no-set-state-in-component-did-update'
+  | 'no-set-state-in-component-will-update'
+  | 'no-string-refs'
+  | 'no-unsafe-component-will-mount'
+  | 'no-unsafe-component-will-receive-props'
+  | 'no-unsafe-component-will-update'
+  | 'no-unstable-context-value'
+  | 'no-unstable-default-props'
+  | 'no-unused-class-component-members'
+  | 'no-unused-state'
+  | 'no-use-context'
+  | 'no-useless-forward-ref'
+  | 'no-useless-fragment'
+  | 'prefer-destructuring-assignment'
+  | 'prefer-react-namespace-import'
+  | 'prefer-read-only-props'
+  | 'prefer-shorthand-boolean'
+  | 'prefer-shorthand-fragment'
+  | 'jsx-key-before-spread'
+  | 'jsx-no-duplicate-props'
+  | 'jsx-no-iife'
+  | 'jsx-no-undef'
+  | 'jsx-uses-react'
+  | 'jsx-uses-vars'
+  | 'ensure-forward-ref-using-ref'
+  | 'no-complicated-conditional-rendering'
+  | 'no-duplicate-jsx-props'
+  | 'no-nested-components'
+  | 'use-jsx-vars';
+
+type ConfigRulesName = Exclude<
+  ReactXRules,
   // opposite of prefer-shorthand-boolean rule
   // https://eslint-react.xyz/docs/rules/avoid-shorthand-boolean
   | 'avoid-shorthand-boolean'
@@ -132,9 +198,12 @@ type PluginRules = Omit<
   // https://eslint-react.xyz/docs/rules/use-jsx-vars
   | 'use-jsx-vars'
 >;
-type PluginRulesConfig = Required<PluginRulesRemapper<'react-x', PluginRules>>;
 
-export const REACT_RULES: PluginRulesConfig = {
+type PluginRulesConfig = Required<
+  PluginRuleNamesRemapper<'react-x', ConfigRulesName>
+>;
+
+export const REACT_RULES: Linter.Config['rules'] = {
   // https://eslint-react.xyz/docs/rules/jsx-key-before-spread
   'react-x/jsx-key-before-spread': 'error',
 
@@ -227,4 +296,4 @@ export const REACT_RULES: PluginRulesConfig = {
 
   // https://eslint-react.xyz/docs/rules/prefer-shorthand-fragment
   'react-x/prefer-shorthand-fragment': 'error',
-};
+} satisfies PluginRulesConfig;

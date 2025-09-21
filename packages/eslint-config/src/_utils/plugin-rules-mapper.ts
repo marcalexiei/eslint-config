@@ -19,3 +19,7 @@ export type PluginRulesRemapper<TPrefix extends string, TRulesRecord> = {
     TRulesRecord[RuleName]
   >;
 };
+
+export type PluginRuleNamesRemapper<TPrefix extends string, TRulesNames> = {
+  [RuleName in TRulesNames as `${TPrefix}/${RuleName & string}`]: Linter.RuleEntry;
+};
