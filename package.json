@@ -24,15 +24,15 @@
     "release": "pnpm run build && changeset publish",
     "check-all": "pnpm run build && pnpm run test && pnpm run \"/^(typecheck|format|lint)$/\""
   },
-  "packageManager": "pnpm@10.14.0+sha512.ad27a79641b49c3e481a16a805baa71817a04bbe06a38d17e60e2eaee83f6a146c6a688125f5792e48dd5ba30e7da52a5cda4c3992b9ccf333f9ce223af84748",
+  "packageManager": "pnpm@10.17.0+sha512.fce8a3dd29a4ed2ec566fb53efbb04d8c44a0f05bc6f24a73046910fb9c3ce7afa35a0980500668fa3573345bd644644fa98338fa168235c80f4aa17aa17fbef",
   "prettier": "@marcalexiei/prettier-config",
   "devDependencies": {
     "@changesets/changelog-github": "0.5.1",
-    "@changesets/cli": "2.29.6",
+    "@changesets/cli": "2.29.7",
     "@commitlint/cli": "19.8.1",
     "@commitlint/config-conventional": "19.8.1",
     "@marcalexiei/prettier-config": "1.1.4",
-    "@types/node": "24.3.0",
+    "@types/node": "24.5.2",
     "husky": "9.1.7",
     "prettier": "3.6.2",
     "typescript": "5.9.2"
