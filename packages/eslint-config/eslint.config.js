@@ -1,7 +1,10 @@
+import { defineConfig } from 'eslint/config';
 import js from '@eslint/js';
 
-/** @type {Array<import('eslint').Linter.Config>} */
-export default [
+export default defineConfig(
+  {
+    ignores: ['dist'],
+  },
   js.configs.recommended,
   {
     languageOptions: {
@@ -9,4 +12,4 @@ export default [
       sourceType: 'module',
     },
   },
-];
+);

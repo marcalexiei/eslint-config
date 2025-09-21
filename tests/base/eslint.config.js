@@ -1,4 +1,4 @@
+import { defineConfig } from 'eslint/config';
 import base from '@marcalexiei/eslint-config/base';
 
-/** @type {import('eslint').Linter.Config} */
-export default [base];
+export default defineConfig(base);
