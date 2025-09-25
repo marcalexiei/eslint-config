@@ -1,28 +1,19 @@
 import tseslint from 'typescript-eslint';
-import type { Linter, ESLint } from 'eslint';
+import type { Linter } from 'eslint';
 
-import {
-  createExtensionMinimatch,
-  getTSExtensions,
-  getTSXExtensions,
-} from '../_utils/extensions.js';
+import { ALL_TS_EXTENSIONS_MINIMATCH } from '../_utils/extensions.js';
 
 import { TYPESCRIPT_RULES } from './rules.js';
 
 const typescriptConfig: Linter.Config = {
   name: '@marcalexiei/eslint-config/typescript',
-  files: [
-    `**/*.${createExtensionMinimatch([
-      ...getTSExtensions({ mode: 'main' }),
-      ...getTSXExtensions(),
-    ])}`,
-  ],
+  files: [ALL_TS_EXTENSIONS_MINIMATCH],
   languageOptions: {
-    parser: tseslint.parser as Linter.Parser,
+    parser: tseslint.parser,
     parserOptions: { sourceType: 'module' },
   },
   plugins: {
-    '@typescript-eslint': tseslint.plugin as ESLint.Plugin,
+    '@typescript-eslint': tseslint.plugin,
   },
   rules: { ...TYPESCRIPT_RULES },
 };
