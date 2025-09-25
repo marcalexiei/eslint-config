@@ -52,3 +52,10 @@ export const ALL_EXTENSIONS = [
 // ================================================
 
 export const ALL_EXTENSIONS_MINIMATCH = `**/*.${createExtensionMinimatch(ALL_EXTENSIONS)}`;
+
+// ================================================
+
+export const ALL_TS_EXTENSIONS_MINIMATCH = `**/*.${createExtensionMinimatch([
+  ...getTSExtensions({ mode: 'full' }),
+  ...getTSXExtensions(),
+])}`;

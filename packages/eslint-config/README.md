@@ -96,6 +96,11 @@ export default defineConfig(base, typescript, {
 
 ### Typescript + React
 
+> [!CAUTION]
+> Only tsx files are supported by `react` configs.
+
+---
+
 > [!WARNING]
 > Refer to "Typescript" section for information about `tsconfig.json`
 
