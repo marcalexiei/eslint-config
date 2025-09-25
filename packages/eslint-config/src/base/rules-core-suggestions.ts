@@ -1,8 +1,8 @@
-import type { ESLintRules } from 'eslint/rules';
+import type { Linter } from 'eslint';
 
-import type { RemoveIndexSignature } from '../_utils/remove-index-signature.js';
 import { PREFER_DESTRUCTURING_RULE_SETTING } from '../_rule-settings/prefer-destructuring.js';
 import { NO_EMPTY_FUNCTIONS_RULE_SETTING } from '../_rule-settings/no-empty-function.js';
+import type { CoreRulesPicker } from '../_utils/core-rules-picker.js';
 
 type RuleName =
   | 'accessor-pairs'
@@ -144,10 +144,7 @@ type RuleName =
   | 'vars-on-top'
   | 'yoda';
 
-export const RULES_CORE_SUGGESTION: Pick<
-  RemoveIndexSignature<ESLintRules>,
-  RuleName
-> = {
+export const RULES_CORE_SUGGESTION: Linter.RulesRecord = {
   // https://eslint.org/docs/rules/accessor-pairs
   'accessor-pairs': 'off',
 
@@ -682,4 +679,4 @@ export const RULES_CORE_SUGGESTION: Pick<
 
   // https://eslint.org/docs/rules/yoda
   yoda: 'error',
-};
+} satisfies CoreRulesPicker<RuleName>;

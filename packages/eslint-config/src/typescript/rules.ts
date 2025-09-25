@@ -566,8 +566,8 @@ const TYPESCRIPT_RULES_CONFIG: PluginRulesConfig = {
   '@typescript-eslint/use-unknown-in-catch-callback-variable': 'error',
 };
 
-export const TYPESCRIPT_RULES = {
+export const TYPESCRIPT_RULES: Linter.RulesRecord = {
   ...ESLINT_RULES_HANDLED_BY_TS,
   ...ESLINT_RULES_HANDLED_BY_TS_OPTIONS,
   ...TYPESCRIPT_RULES_CONFIG,
-} as Linter.RulesRecord;
+};
