@@ -13,7 +13,7 @@ type PluginRules = Omit<
 >;
 type PluginRulesConfig = PluginRulesRemapper<'import-x', PluginRules>;
 
-export const RULES_PLUGIN_IMPORT: Linter.Config['rules'] = {
+export const RULES_PLUGIN_IMPORT: Linter.RulesRecord = {
   // https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/no-unresolved.md
   'import-x/no-unresolved': ['error'],
 

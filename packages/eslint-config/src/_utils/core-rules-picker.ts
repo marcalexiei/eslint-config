@@ -1,4 +1,5 @@
 import type { ESLintRules } from 'eslint/rules';
+
 import type { RemoveIndexSignature } from './remove-index-signature.js';
 
 export type CoreRulesPicker<

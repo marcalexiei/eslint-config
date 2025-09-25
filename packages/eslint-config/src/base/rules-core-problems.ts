@@ -1,3 +1,5 @@
+import type { Linter } from 'eslint';
+
 import type { CoreRulesPicker } from '../_utils/core-rules-picker.js';
 
 type RuleName =
@@ -61,7 +63,7 @@ type RuleName =
   | 'use-isnan'
   | 'valid-typeof';
 
-export const RULES_CORE_PROBLEMS: CoreRulesPicker<RuleName> = {
+export const RULES_CORE_PROBLEMS: Linter.RulesRecord = {
   // https://eslint.org/docs/rules/array-callback-return
   'array-callback-return': [
     'error',
@@ -246,4 +248,4 @@ export const RULES_CORE_PROBLEMS: CoreRulesPicker<RuleName> = {
 
   // https://eslint.org/docs/rules/valid-typeof
   'valid-typeof': ['error', { requireStringLiterals: true }],
-};
+} satisfies CoreRulesPicker<RuleName>;

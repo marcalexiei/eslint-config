@@ -203,7 +203,7 @@ type PluginRulesConfig = Required<
   PluginRuleNamesRemapper<'react-x', ConfigRulesName>
 >;
 
-export const REACT_RULES: Linter.Config['rules'] = {
+export const REACT_RULES: Linter.RulesRecord = {
   // https://eslint-react.xyz/docs/rules/jsx-key-before-spread
   'react-x/jsx-key-before-spread': 'error',
 

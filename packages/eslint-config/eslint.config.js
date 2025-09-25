@@ -1,6 +1,7 @@
 import { defineConfig } from 'eslint/config';
 import js from '@eslint/js';
 import tseslint from 'typescript-eslint';
+import eslintPluginImportX from 'eslint-plugin-import-x';
 
 export default defineConfig(
   {
@@ -9,12 +10,6 @@ export default defineConfig(
   js.configs.recommended,
   tseslint.configs.recommendedTypeChecked,
   {
-    languageOptions: {
-      parserOptions: {
-        projectService: true,
-        tsconfigRootDir: import.meta.dirname,
-      },
-    },
     rules: {
       '@typescript-eslint/consistent-type-imports': [
         'error',
@@ -23,6 +18,35 @@ export default defineConfig(
           disallowTypeAnnotations: false,
         },
       ],
+    },
+  },
+  {
+    plugins: {
+      'import-x': eslintPluginImportX,
+    },
+    rules: {
+      'import-x/order': [
+        'error',
+        {
+          groups: [
+            'builtin',
+            'external',
+            'internal',
+            'parent',
+            'sibling',
+            'index',
+          ],
+          'newlines-between': 'always',
+        },
+      ],
+    },
+  },
+  {
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
+      },
     },
   },
   {
