@@ -66,19 +66,9 @@ export const RULES_PLUGIN_IMPORT: Linter.RulesRecord = {
         'test.{js,jsx,ts,tsx}', // repos with a single test file
         'test-*.{js,jsx,ts,tsx}', // repos with multiple top-level test files
         '**/*{.,_}{test,spec}.{js,jsx,ts,tsx}', // tests where the extension or filename suffix denotes that it is a test
-        '**/jest.config.js', // jest config
-        '**/jest.setup.js', // jest setup
-        '**/webpack.config.{js,jsx,ts,tsx}', // webpack config
-        '**/webpack.config.*.{js,jsx,ts,tsx}', // webpack config
-        '**/rollup.config.{js,jsx,ts,tsx}', // rollup config
-        '**/rollup.config.*.{js,jsx,ts,tsx}', // rollup config
         '**/eslint.config.js', // eslint config
-        '**/vite.config.{js,jsx,ts,tsx}', // vite config
-        '**/vite.config.*.{js,jsx,ts,tsx}', // vite config
-        '**/vitest.config.{js,jsx,ts,tsx}', // vitest config
-        '**/vitest.config.*.{js,jsx,ts,tsx}', // vitest config
-        '**/vitest.workspace.{js,jsx,ts,tsx}', // vitest config
-        '**/vitest.workspace.*.{js,jsx,ts,tsx}', // vitest config
+        '**/{rollup,rolldown,vite,vitest,tsdown}.config.{js,ts}',
+        '**/{rollup,rolldown,vite,vitest,tsdown}.config.*.{js,ts}',
       ],
     },
   ],
