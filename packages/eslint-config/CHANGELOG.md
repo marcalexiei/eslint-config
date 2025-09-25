@@ -1,5 +1,17 @@
 # @marcalexiei/eslint-config
 
+## 3.2.0
+
+### Minor Changes
+
+- [#87](https://github.com/marcalexiei/eslint-config/pull/87) [`4f43376`](https://github.com/marcalexiei/eslint-config/commit/4f4337629e5e8497cf92fca43fe8751e564b892a) Thanks [@marcalexiei](https://github.com/marcalexiei)! - feat(import): refine `import-x/no-extraneous-dependencies` files for `devDependencies` settings
+
+### Patch Changes
+
+- [#82](https://github.com/marcalexiei/eslint-config/pull/82) [`a04a38c`](https://github.com/marcalexiei/eslint-config/commit/a04a38cd14c47b92831b1cb93e39c106104834d9) Thanks [@marcalexiei](https://github.com/marcalexiei)! - fix(react): react configs should work only on tsx like files, using js files throws an error
+
+- [#86](https://github.com/marcalexiei/eslint-config/pull/86) [`1b4bdbd`](https://github.com/marcalexiei/eslint-config/commit/1b4bdbdcf129c432809cc458bff7eb531f4ba285) Thanks [@marcalexiei](https://github.com/marcalexiei)! - fix: avoid exposing internal rules strict type
+
 ## 3.1.1
 
 ### Patch Changes
