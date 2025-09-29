@@ -4,8 +4,15 @@ import type { PluginRuleNamesRemapper } from '../_utils/plugin-rules-mapper.js';
 
 /** @see GET_RULES_NAME.md */
 type ReactXRules =
-  | 'avoid-shorthand-boolean'
-  | 'avoid-shorthand-fragment'
+  | 'jsx-key-before-spread'
+  | 'jsx-no-comment-textnodes'
+  | 'jsx-no-duplicate-props'
+  | 'jsx-no-iife'
+  | 'jsx-no-undef'
+  | 'jsx-shorthand-boolean'
+  | 'jsx-shorthand-fragment'
+  | 'jsx-uses-react'
+  | 'jsx-uses-vars'
   | 'no-access-state-in-setstate'
   | 'no-array-index-key'
   | 'no-children-count'
@@ -16,8 +23,6 @@ type ReactXRules =
   | 'no-children-to-array'
   | 'no-class-component'
   | 'no-clone-element'
-  | 'no-comment-textnodes'
-  | 'no-complex-conditional-rendering'
   | 'no-component-will-mount'
   | 'no-component-will-receive-props'
   | 'no-component-will-update'
@@ -26,6 +31,7 @@ type ReactXRules =
   | 'no-default-props'
   | 'no-direct-mutation-state'
   | 'no-duplicate-key'
+  | 'no-forbidden-props'
   | 'no-forward-ref'
   | 'no-implicit-key'
   | 'no-leaked-conditional-rendering'
@@ -41,46 +47,31 @@ type ReactXRules =
   | 'no-set-state-in-component-did-update'
   | 'no-set-state-in-component-will-update'
   | 'no-string-refs'
+  | 'no-unnecessary-key'
+  | 'no-unnecessary-use-callback'
+  | 'no-unnecessary-use-memo'
+  | 'no-unnecessary-use-prefix'
   | 'no-unsafe-component-will-mount'
   | 'no-unsafe-component-will-receive-props'
   | 'no-unsafe-component-will-update'
   | 'no-unstable-context-value'
   | 'no-unstable-default-props'
   | 'no-unused-class-component-members'
+  | 'no-unused-props'
   | 'no-unused-state'
   | 'no-use-context'
   | 'no-useless-forward-ref'
   | 'no-useless-fragment'
   | 'prefer-destructuring-assignment'
-  | 'prefer-react-namespace-import'
+  | 'prefer-namespace-import'
   | 'prefer-read-only-props'
-  | 'prefer-shorthand-boolean'
-  | 'prefer-shorthand-fragment'
-  | 'jsx-key-before-spread'
-  | 'jsx-no-duplicate-props'
-  | 'jsx-no-iife'
-  | 'jsx-no-undef'
-  | 'jsx-uses-react'
-  | 'jsx-uses-vars'
-  | 'ensure-forward-ref-using-ref'
-  | 'no-complicated-conditional-rendering'
-  | 'no-duplicate-jsx-props'
-  | 'no-nested-components'
-  | 'use-jsx-vars';
+  | 'prefer-use-state-lazy-initialization';
 
 type ConfigRulesName = Exclude<
   ReactXRules,
-  // opposite of prefer-shorthand-boolean rule
-  // https://eslint-react.xyz/docs/rules/avoid-shorthand-boolean
-  | 'avoid-shorthand-boolean'
-
-  // opposite of prefer-shorthand-fragment rule
-  // https://eslint-react.xyz/docs/rules/avoid-shorthand-fragment
-  | 'avoid-shorthand-fragment'
-
   // legacy api
-  // https://eslint-react.xyz/docs/rules/ensure-forward-ref-using-ref
-  | 'ensure-forward-ref-using-ref'
+  // https://eslint-react.xyz/docs/rules/no-useless-forward-ref
+  | 'no-useless-forward-ref'
 
   // typescript handles this
   // https://eslint-react.xyz/docs/rules/jsx-no-duplicate-props
@@ -97,14 +88,6 @@ type ConfigRulesName = Exclude<
   // typescript handles this
   // https://eslint-react.xyz/docs/rules/jsx-uses-vars
   | 'jsx-uses-vars'
-
-  // experimental
-  // https://eslint-react.xyz/docs/rules/no-complex-conditional-rendering
-  | 'no-complex-conditional-rendering'
-
-  // experimental
-  // https://eslint-react.xyz/docs/rules/no-complicated-conditional-rendering
-  | 'no-complicated-conditional-rendering'
 
   // class related rule
   // https://eslint-react.xyz/docs/rules/no-access-state-in-setstate
@@ -134,9 +117,9 @@ type ConfigRulesName = Exclude<
   // https://eslint-react.xyz/docs/rules/no-direct-mutation-state
   | 'no-direct-mutation-state'
 
-  // typescript handles this
-  // https://eslint-react.xyz/docs/rules/no-duplicate-jsx-props
-  | 'no-duplicate-jsx-props'
+  // user should customize this
+  // https://eslint-react.xyz/docs/rules/no-forbidden-props
+  | 'no-forbidden-props'
 
   // legacy API rule
   // https://eslint-react.xyz/docs/rules/no-forward-ref
@@ -186,17 +169,9 @@ type ConfigRulesName = Exclude<
   // https://eslint-react.xyz/docs/rules/no-unused-state
   | 'no-unused-state'
 
-  // legacy api rule
-  // https://eslint-react.xyz/docs/rules/no-useless-forward-ref
-  | 'no-useless-forward-ref'
-
   // not needed
   // https://eslint-react.xyz/docs/rules/prefer-read-only-props
   | 'prefer-read-only-props'
-
-  // typescript handles this
-  // https://eslint-react.xyz/docs/rules/use-jsx-vars
-  | 'use-jsx-vars'
 >;
 
 type PluginRulesConfig = Required<
@@ -209,6 +184,15 @@ export const REACT_RULES: Linter.RulesRecord = {
 
   // https://eslint-react.xyz/docs/rules/jsx-no-iife
   'react-x/jsx-no-iife': 'error',
+
+  // https://eslint-react.xyz/docs/rules/jsx-no-comment-textnodes
+  'react-x/jsx-no-comment-textnodes': 'error',
+
+  // https://eslint-react.xyz/docs/rules/jsx-shorthand-boolean
+  'react-x/jsx-shorthand-boolean': 'error',
+
+  // https://eslint-react.xyz/docs/rules/jsx-shorthand-fragment
+  'react-x/jsx-shorthand-fragment': 'error',
 
   // https://eslint-react.xyz/docs/rules/no-array-index-key
   'react-x/no-array-index-key': 'error',
@@ -237,9 +221,6 @@ export const REACT_RULES: Linter.RulesRecord = {
   // https://eslint-react.xyz/docs/rules/no-clone-element
   'react-x/no-clone-element': 'error',
 
-  // https://eslint-react.xyz/docs/rules/no-comment-textnodes
-  'react-x/no-comment-textnodes': 'error',
-
   // https://eslint-react.xyz/docs/rules/no-context-provider
   'react-x/no-context-provider': 'error',
 
@@ -267,17 +248,29 @@ export const REACT_RULES: Linter.RulesRecord = {
   // https://eslint-react.xyz/docs/rules/no-nested-component-definitions
   'react-x/no-nested-component-definitions': 'error',
 
-  // https://eslint-react.xyz/docs/rules/no-nested-components
-  'react-x/no-nested-components': 'error',
-
   // https://eslint-react.xyz/docs/rules/no-nested-lazy-component-declarations
   'react-x/no-nested-lazy-component-declarations': 'error',
+
+  // // https://eslint-react.xyz/docs/rules/no-unnecessary-key
+  'react-x/no-unnecessary-key': 'error',
+
+  // // https://eslint-react.xyz/docs/rules/no-unnecessary-use-callback
+  'react-x/no-unnecessary-use-callback': 'error',
+
+  // // https://eslint-react.xyz/docs/rules/no-unnecessary-use-memo
+  'react-x/no-unnecessary-use-memo': 'error',
+
+  // // https://eslint-react.xyz/docs/rules/no-unnecessary-use-prefix
+  'react-x/no-unnecessary-use-prefix': 'error',
 
   // https://eslint-react.xyz/docs/rules/no-unstable-context-value
   'react-x/no-unstable-context-value': 'error',
 
   // https://eslint-react.xyz/docs/rules/no-unstable-default-props
   'react-x/no-unstable-default-props': 'error',
+
+  // https://eslint-react.xyz/docs/rules/no-unused-props
+  'react-x/no-unused-props': 'error',
 
   // https://eslint-react.xyz/docs/rules/no-use-context
   'react-x/no-use-context': 'error',
@@ -289,11 +282,8 @@ export const REACT_RULES: Linter.RulesRecord = {
   'react-x/prefer-destructuring-assignment': 'error',
 
   // https://eslint-react.xyz/docs/rules/prefer-react-namespace-import
-  'react-x/prefer-react-namespace-import': 'error',
+  'react-x/prefer-namespace-import': 'error',
 
-  // https://eslint-react.xyz/docs/rules/prefer-shorthand-boolean
-  'react-x/prefer-shorthand-boolean': 'error',
-
-  // https://eslint-react.xyz/docs/rules/prefer-shorthand-fragment
-  'react-x/prefer-shorthand-fragment': 'error',
+  // https://eslint-react.xyz/docs/rules/prefer-use-state-lazy-initialization
+  'react-x/prefer-use-state-lazy-initialization': 'error',
 } satisfies PluginRulesConfig;

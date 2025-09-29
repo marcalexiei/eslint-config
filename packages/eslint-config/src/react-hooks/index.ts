@@ -16,8 +16,6 @@ const reactHooksConfig: Linter.Config = {
     'react-hooks/exhaustive-deps': 'error',
 
     'react-hooks-extra/no-direct-set-state-in-use-effect': 'error',
-    'react-hooks-extra/no-unnecessary-use-prefix': 'error',
-    'react-hooks-extra/prefer-use-state-lazy-initialization': 'error',
   },
 };
 
