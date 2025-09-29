@@ -69,3 +69,17 @@ describe('display-name', () => {
     assert.strictEqual(message.messageId, 'noMissingComponentDisplayName');
   });
 });
+
+describe('no-unused-props', () => {
+  it('should throw error', async () => {
+    const result = await eslint.lintFiles(['./fixtures/no-unused-props']);
+
+    const fileMessages = result[0].messages;
+    assert.strictEqual(fileMessages.length, 1);
+
+    const [message] = fileMessages;
+    assert.strictEqual(message.ruleId, 'react-x/no-unused-props');
+    assert.strictEqual(message.severity, 2);
+    assert.strictEqual(message.messageId, 'noUnusedProps');
+  });
+});

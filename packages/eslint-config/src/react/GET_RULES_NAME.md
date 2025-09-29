@@ -9,7 +9,7 @@
 1. Run
 
    ```sh
-   node './packages/eslint-config/scripts/get-rules-from-react-x-repo.ts'
+   node './packages/eslint-config/scripts/get-rules-from-react-x.ts'
    ```
 
 2. Update the relevant `ReactXRules` type in `rule.ts` file with the relevant output

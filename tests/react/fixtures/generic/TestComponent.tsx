@@ -4,8 +4,6 @@ import type { MyModel } from './models';
 
 interface TestComponentProps {
   data?: MyModel;
-
-  itemList: Array<MyModel>;
 }
 
 export function TestComponent(props: TestComponentProps): React.JSX.Element {
