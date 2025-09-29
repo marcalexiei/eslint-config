@@ -1,5 +1,15 @@
 # @marcalexiei/eslint-config
 
+## 4.0.0
+
+### Major Changes
+
+- [#90](https://github.com/marcalexiei/eslint-config/pull/90) [`56649c5`](https://github.com/marcalexiei/eslint-config/commit/56649c5a23d39ebc7507a066715a994285428cdc) Thanks [@marcalexiei](https://github.com/marcalexiei)! - feat(react)!: support eslint-plugin-react-(x|hooks-extra) 2
+
+### Minor Changes
+
+- [#92](https://github.com/marcalexiei/eslint-config/pull/92) [`838c122`](https://github.com/marcalexiei/eslint-config/commit/838c122c5d9b49de8883bacaed0f280c11fbc503) Thanks [@marcalexiei](https://github.com/marcalexiei)! - feat(import): add `.eslint-doc-generatorrc.js` to `import-x/no-extraneous-dependencies` `devDependencies` option
+
 ## 3.2.0
 
 ### Minor Changes
