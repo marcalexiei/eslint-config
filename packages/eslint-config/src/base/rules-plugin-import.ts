@@ -66,9 +66,12 @@ export const RULES_PLUGIN_IMPORT: Linter.RulesRecord = {
         'test.{js,jsx,ts,tsx}', // repos with a single test file
         'test-*.{js,jsx,ts,tsx}', // repos with multiple top-level test files
         '**/*{.,_}{test,spec}.{js,jsx,ts,tsx}', // tests where the extension or filename suffix denotes that it is a test
-        '**/eslint.config.js', // eslint config
+
         '**/{rollup,rolldown,vite,vitest,tsdown}.config.{js,ts}',
         '**/{rollup,rolldown,vite,vitest,tsdown}.config.*.{js,ts}',
+
+        '**/eslint.config.{js,ts}', // eslint config
+        '**/.eslint-doc-generatorrc.{js,ts}', // eslint doc generator config
       ],
     },
   ],
