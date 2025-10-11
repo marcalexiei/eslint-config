@@ -572,7 +572,7 @@ export const RULES_CORE_SUGGESTION: Linter.RulesRecord = {
   'no-var': 'error',
 
   // https://eslint.org/docs/rules/no-void
-  'no-void': 'error',
+  'no-void': ['error', { allowAsStatement: true }],
 
   // https://eslint.org/docs/rules/no-warning-comments
   'no-warning-comments': 'off',
