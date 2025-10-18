@@ -72,6 +72,9 @@ export const RULES_PLUGIN_IMPORT: Linter.RulesRecord = {
 
         '**/eslint.config.{js,ts}', // eslint config
         '**/.eslint-doc-generatorrc.{js,ts}', // eslint doc generator config
+
+        '**/knip.{js,ts}', // knip
+        '**/knip.config.{js,ts}', // knip
       ],
     },
   ],
