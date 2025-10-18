@@ -1,5 +1,11 @@
 # @marcalexiei/eslint-config
 
+## 4.1.0
+
+### Minor Changes
+
+- [#98](https://github.com/marcalexiei/eslint-config/pull/98) [`7d75081`](https://github.com/marcalexiei/eslint-config/commit/7d750810b3d65bb5dbc32eaae412ddc8fb26c3f3) Thanks [@marcalexiei](https://github.com/marcalexiei)! - feat(import): add `knip` configs to `import-x/no-extraneous-dependencies` `devDependencies` option
+
 ## 4.0.0
 
 ### Major Changes
