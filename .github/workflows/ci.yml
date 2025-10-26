@@ -8,8 +8,7 @@ on:
     branches:
       - main
 
-permissions:
-  contents: read
+permissions: {}
 
 env:
   HUSKY: 0
@@ -19,6 +18,12 @@ jobs:
   test:
     name: Test (Node ${{ matrix.node }})
 
+    permissions:
+      contents: read
+
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
     strategy:
       fail-fast: true
       matrix:
@@ -26,9 +31,6 @@ jobs:
           - 20
           - 22
           - 24
-
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
 
     steps:
       - name: Checkout
@@ -45,18 +47,14 @@ jobs:
       - name: Run test
         run: pnpm run test
 
-  check:
-    strategy:
-      fail-fast: true
-      matrix:
-        script:
-          - typecheck
-          - lint
-          - format
+  code-checks:
+    name: Code checks
 
-    name: Code check
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 5
+
+    permissions:
+      contents: read
 
     steps:
       - name: Checkout
@@ -65,16 +63,23 @@ jobs:
       - name: Install Dependencies
         uses: ./.github/actions/install-dependencies
 
-      - name: Run ${{ matrix.script }}
-        run: pnpm run ${{ matrix.script }}
+      - name: Typecheck
+        run: pnpm run typecheck
+
+      - name: Lint
+        run: pnpm run lint
+
+      - name: Format
+        run: pnpm run format
 
   ci-ok:
     name: CI OK
-    runs-on: ubuntu-latest
     if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 1
     needs:
       - test
-      - check
+      - code-checks
     steps:
       - name: Exit with error if some jobs are not successful
         run: exit 1
