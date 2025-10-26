@@ -62,7 +62,7 @@ const ESLINT_RULES_HANDLED_BY_TS = {
   // https://eslint.org/docs/rules/no-unsafe-negation
   'no-unsafe-negation': 'off', // ts(2365) & ts(2322) & ts(2358)
 
-  // https://eslint.org/docs/rules/no-unsafe-negation
+  // https://eslint.org/docs/rules/no-with
   'no-with': 'off', // ts(1101) & ts(2410)
 } satisfies Linter.RulesRecord;
 
