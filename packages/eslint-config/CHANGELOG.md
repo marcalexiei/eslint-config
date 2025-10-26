@@ -1,5 +1,13 @@
 # @marcalexiei/eslint-config
 
+## 4.2.0
+
+### Minor Changes
+
+- [#106](https://github.com/marcalexiei/eslint-config/pull/106) [`10b7e90`](https://github.com/marcalexiei/eslint-config/commit/10b7e90156411de107dd85ee5806af581a869068) Thanks [@marcalexiei](https://github.com/marcalexiei)! - feat(base): enable `preserve-caught-error` rule
+
+- [#104](https://github.com/marcalexiei/eslint-config/pull/104) [`f568aa5`](https://github.com/marcalexiei/eslint-config/commit/f568aa54d527f453f9aaa1c98c0cd8fa72f07777) Thanks [@marcalexiei](https://github.com/marcalexiei)! - feat(typescript): enable `no-floating-promises`
+
 ## 4.1.0
 
 ### Minor Changes
