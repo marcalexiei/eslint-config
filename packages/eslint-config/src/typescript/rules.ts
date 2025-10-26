@@ -299,7 +299,7 @@ const TYPESCRIPT_RULES_CONFIG: PluginRulesConfig = {
   '@typescript-eslint/no-extraneous-class': 'error',
 
   // https://typescript-eslint.io/rules/no-floating-promises/
-  '@typescript-eslint/no-floating-promises': 'off',
+  '@typescript-eslint/no-floating-promises': 'error',
 
   // https://typescript-eslint.io/rules/no-for-in-array/
   '@typescript-eslint/no-for-in-array': 'error',

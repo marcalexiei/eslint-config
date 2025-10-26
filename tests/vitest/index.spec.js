@@ -36,3 +36,22 @@ describe('consistent-test-filename', () => {
     );
   });
 });
+
+describe('promises', () => {
+  it('throw error', async () => {
+    const result = await eslint.lintFiles(['./fixtures/promises']);
+
+    assert.strictEqual(result.length, 1);
+
+    const [fileResult] = result;
+    assert.strictEqual(fileResult.errorCount, 1, 'one error');
+
+    const [noFloatingPromiseError] = result[0].messages;
+
+    assert.strictEqual(
+      noFloatingPromiseError.ruleId,
+      '@typescript-eslint/no-floating-promises',
+      'must have an error from "@typescript-eslint/no-floating-promises"',
+    );
+  });
+});
