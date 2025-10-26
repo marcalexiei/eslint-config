@@ -1,5 +1,11 @@
 # @marcalexiei/eslint-config
 
+## 4.2.1
+
+### Patch Changes
+
+- [#109](https://github.com/marcalexiei/eslint-config/pull/109) [`fbb7dd7`](https://github.com/marcalexiei/eslint-config/commit/fbb7dd721d59fe2f2c603f7c144e08773e4a1544) Thanks [@marcalexiei](https://github.com/marcalexiei)! - docs: refine "Typescript + React" caution message
+
 ## 4.2.0
 
 ### Minor Changes
