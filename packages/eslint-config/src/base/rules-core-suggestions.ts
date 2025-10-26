@@ -132,6 +132,7 @@ type RuleName =
   | 'prefer-rest-params'
   | 'prefer-spread'
   | 'prefer-template'
+  | 'preserve-caught-error'
   | 'radix'
   | 'require-await'
   | 'require-unicode-regexp'
@@ -643,6 +644,10 @@ export const RULES_CORE_SUGGESTION: Linter.RulesRecord = {
   // suggest using template literals instead of string concatenation
   // https://eslint.org/docs/rules/prefer-template
   'prefer-template': 'error',
+
+  // Disallow losing originally caught error when re-throwing custom errors
+  // https://eslint.org/docs/rules/preserve-caught-error
+  'preserve-caught-error': 'error',
 
   // https://eslint.org/docs/rules/radix
   radix: 'error',
