@@ -225,7 +225,7 @@ export const RULES_CORE_PROBLEMS: Linter.RulesRecord = {
   ],
 
   // https://eslint.org/docs/rules/no-unused-private-class-members
-  'no-unused-private-class-members': 'off',
+  'no-unused-private-class-members': 'error',
 
   // https://eslint.org/docs/rules/no-unused-vars
   'no-unused-vars': 'error',
