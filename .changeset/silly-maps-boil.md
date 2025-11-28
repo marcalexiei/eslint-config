@@ -1,5 +1,5 @@
 ---
-'@marcalexiei/eslint-config': patch
+'@marcalexiei/eslint-config': major
 ---
 
 feat(vitest)!: enable additional rules
