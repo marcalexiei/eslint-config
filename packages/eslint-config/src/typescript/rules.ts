@@ -437,6 +437,10 @@ const TYPESCRIPT_RULES_CONFIG: PluginRulesConfig = {
   // https://typescript-eslint.io/rules/no-unsafe-unary-minus/
   '@typescript-eslint/no-unsafe-unary-minus': 'error',
 
+  // https://typescript-eslint.io/rules/no-unused-private-class-members/
+  'no-unused-private-class-members': 'off',
+  '@typescript-eslint/no-unused-private-class-members': 'error',
+
   // https://typescript-eslint.io/rules/no-unused-expressions/
   'no-unused-expressions': 'off',
   '@typescript-eslint/no-unused-expressions': 'error',
