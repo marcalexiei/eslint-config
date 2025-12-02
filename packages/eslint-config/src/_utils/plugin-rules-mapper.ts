@@ -1,5 +1,5 @@
-import type { Linter } from 'eslint';
 import type { RuleModule } from '@typescript-eslint/utils/ts-eslint';
+import type { Linter } from 'eslint';
 
 type GetRuleOptions<TRule> =
   TRule extends RuleModule<string, infer Options>

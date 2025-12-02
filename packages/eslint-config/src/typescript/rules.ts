@@ -1,15 +1,15 @@
 import type { Linter } from 'eslint';
 import type { ESLintRules } from 'eslint/rules';
 
-import { PREFER_DESTRUCTURING_RULE_SETTING } from '../_rule-settings/prefer-destructuring.js';
-import { NO_EMPTY_FUNCTIONS_RULE_SETTING } from '../_rule-settings/no-empty-function.js';
-import type { PluginRulesRemapper } from '../_utils/plugin-rules-mapper.js';
-import type { RemoveIndexSignature } from '../_utils/remove-index-signature.js';
 /**
  * This is not very polished but typescript eslint doesn't expose rules types
  * @see TYPESCRIPT_RULES_CONFIG
  */
 import type tsEslintPluginRules from '../../node_modules/@typescript-eslint/eslint-plugin/dist/rules/index.js';
+import { NO_EMPTY_FUNCTIONS_RULE_SETTING } from '../_rule-settings/no-empty-function.js';
+import { PREFER_DESTRUCTURING_RULE_SETTING } from '../_rule-settings/prefer-destructuring.js';
+import type { PluginRulesRemapper } from '../_utils/plugin-rules-mapper.js';
+import type { RemoveIndexSignature } from '../_utils/remove-index-signature.js';
 
 const ESLINT_RULES_HANDLED_BY_TS = {
   // Check `@typescript-eslint/eslint-plugin/dist/configs/eslint-recommended-raw.js` rules

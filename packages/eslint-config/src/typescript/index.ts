@@ -1,5 +1,5 @@
-import tseslint from 'typescript-eslint';
 import type { Linter } from 'eslint';
+import tseslint from 'typescript-eslint';
 
 import { ALL_TS_EXTENSIONS_MINIMATCH } from '../_utils/extensions.js';
 
