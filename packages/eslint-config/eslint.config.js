@@ -1,7 +1,7 @@
-import { defineConfig } from 'eslint/config';
 import js from '@eslint/js';
-import tseslint from 'typescript-eslint';
+import { defineConfig } from 'eslint/config';
 import eslintPluginImportX from 'eslint-plugin-import-x';
+import tseslint from 'typescript-eslint';
 
 export default defineConfig(
   {
@@ -36,6 +36,11 @@ export default defineConfig(
             'sibling',
             'index',
           ],
+          alphabetize: {
+            order: 'asc',
+            caseInsensitive: false,
+          },
+          named: { enabled: true, export: false },
           'newlines-between': 'always',
         },
       ],

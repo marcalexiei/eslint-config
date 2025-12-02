@@ -1,6 +1,6 @@
 import type { ESLint, Linter } from 'eslint';
-import eslintPluginImportX from 'eslint-plugin-import-x';
 import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript';
+import eslintPluginImportX from 'eslint-plugin-import-x';
 
 import {
   ALL_EXTENSIONS,
@@ -8,8 +8,8 @@ import {
   getTSXExtensions,
 } from '../_utils/extensions.js';
 
-import { RULES_CORE_PROBLEMS } from './rules-core-problems.js';
 import { RULES_CORE_LAYOUT } from './rules-core-layout.js';
+import { RULES_CORE_PROBLEMS } from './rules-core-problems.js';
 import { RULES_CORE_SUGGESTION } from './rules-core-suggestions.js';
 import { RULES_PLUGIN_IMPORT } from './rules-plugin-import.js';
 

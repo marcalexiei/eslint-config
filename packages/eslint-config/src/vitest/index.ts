@@ -1,5 +1,5 @@
-import type { Linter, ESLint } from 'eslint';
 import eslintPluginVitest from '@vitest/eslint-plugin';
+import type { ESLint, Linter } from 'eslint';
 
 import {
   ALL_EXTENSIONS,

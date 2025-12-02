@@ -15,7 +15,7 @@ type PluginRulesConfig = PluginRulesRemapper<'import-x', PluginRules>;
 
 export const RULES_PLUGIN_IMPORT: Linter.RulesRecord = {
   // https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/no-unresolved.md
-  'import-x/no-unresolved': ['error'],
+  'import-x/no-unresolved': 'error',
 
   // ensure named imports coupled with named exports
   // https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/named.md#when-not-to-use-it
@@ -282,6 +282,11 @@ export const RULES_PLUGIN_IMPORT: Linter.RulesRecord = {
     'error',
     {
       groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+      alphabetize: {
+        order: 'asc',
+        caseInsensitive: false,
+      },
+      named: { enabled: true, export: false },
       'newlines-between': 'always',
     },
   ],

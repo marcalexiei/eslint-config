@@ -1,7 +1,7 @@
 import type { Linter } from 'eslint';
 
-import { PREFER_DESTRUCTURING_RULE_SETTING } from '../_rule-settings/prefer-destructuring.js';
 import { NO_EMPTY_FUNCTIONS_RULE_SETTING } from '../_rule-settings/no-empty-function.js';
+import { PREFER_DESTRUCTURING_RULE_SETTING } from '../_rule-settings/prefer-destructuring.js';
 import type { CoreRulesPicker } from '../_utils/core-rules-picker.js';
 
 type RuleName =

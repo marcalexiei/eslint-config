@@ -1,6 +1,6 @@
 // @ts-check
-import { describe, it } from 'node:test';
 import assert from 'assert';
+import { describe, it } from 'node:test';
 
 import { ESLint } from 'eslint';
 
