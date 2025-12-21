@@ -1,5 +1,53 @@
 # @marcalexiei/eslint-config
 
+## 5.0.0
+
+### Major Changes
+
+- [#125](https://github.com/marcalexiei/eslint-config/pull/125) [`6ea03f3`](https://github.com/marcalexiei/eslint-config/commit/6ea03f3908fc31f94b0075845e4f1a5c8e66071a) Thanks [@marcalexiei](https://github.com/marcalexiei)! - feat(import)!: enable `alphabetize`
+
+- [#121](https://github.com/marcalexiei/eslint-config/pull/121) [`42239a5`](https://github.com/marcalexiei/eslint-config/commit/42239a52445a9556efdeccb23f76bef32f18fa23) Thanks [@marcalexiei](https://github.com/marcalexiei)! - feat(peerDeps)!: require `eslint` ^9.39.0 and `typescript-eslint` ^8.48
+
+- [#115](https://github.com/marcalexiei/eslint-config/pull/115) [`38bf0eb`](https://github.com/marcalexiei/eslint-config/commit/38bf0eb5b70f8ff19711bbec990bbd9ba01816a1) Thanks [@marcalexiei](https://github.com/marcalexiei)! - feat(vitest)!: enable additional rules
+  - `consistent-each-for`
+  - `no-conditional-expect`
+  - `no-conditional-in-test`
+  - `no-conditional-tests`
+  - `no-duplicate-hooks`
+  - `no-focused-tests`
+  - `no-interpolation-in-snapshots`
+  - `no-mocks-import`
+  - `no-standalone-expect`
+  - `prefer-called-exactly-once-with`
+  - `prefer-comparison-matcher`
+  - `prefer-expect-resolves`
+  - `prefer-expect-type-of`
+  - `prefer-hooks-in-order`
+  - `prefer-hooks-on-top`
+  - `prefer-import-in-mock`
+  - `prefer-mock-promise-shorthand`
+  - `prefer-spy-on`
+  - `prefer-strict-boolean-matchers`
+  - `prefer-to-contain`
+  - `prefer-to-have-length`
+  - `prefer-todo`
+  - `prefer-vi-mocked`
+  - `require-to-throw-message`
+  - `valid-expect-in-promise`
+  - `warn-todo`
+
+### Minor Changes
+
+- [#133](https://github.com/marcalexiei/eslint-config/pull/133) [`3da0bc3`](https://github.com/marcalexiei/eslint-config/commit/3da0bc3900517c5687addc6a91f6529b242401e0) Thanks [@marcalexiei](https://github.com/marcalexiei)! - feat(react-hooks): support `eslint-plugin-react-hooks` v7
+
+- [#117](https://github.com/marcalexiei/eslint-config/pull/117) [`9d6e7bc`](https://github.com/marcalexiei/eslint-config/commit/9d6e7bc2cdd91e2939b1b6be93d084da821a7282) Thanks [@marcalexiei](https://github.com/marcalexiei)! - feat(base & typescript): enable `no-unused-private-class-members` rule
+
+- [#130](https://github.com/marcalexiei/eslint-config/pull/130) [`bd182ae`](https://github.com/marcalexiei/eslint-config/commit/bd182aeb74e9bc7f507e2a30377c54e4fc5894c7) Thanks [@marcalexiei](https://github.com/marcalexiei)! - fix(typescript): disable `@typescript-eslint/no-useless-default-assignment` due to bugs, might be enabled in the future
+
+### Patch Changes
+
+- [#109](https://github.com/marcalexiei/eslint-config/pull/109) [`fbb7dd7`](https://github.com/marcalexiei/eslint-config/commit/fbb7dd721d59fe2f2c603f7c144e08773e4a1544) Thanks [@marcalexiei](https://github.com/marcalexiei)! - docs: refine "Typescript + React" caution message
+
 ## 4.2.0
 
 ### Minor Changes
