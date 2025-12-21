@@ -457,6 +457,15 @@ const TYPESCRIPT_RULES_CONFIG: PluginRulesConfig = {
   'no-useless-constructor': 'off',
   '@typescript-eslint/no-useless-constructor': 'off',
 
+  // https://typescript-eslint.io/rules/no-useless-default-assignment/
+  // At release time this issue has different issues:
+  // - https://github.com/typescript-eslint/typescript-eslint/issues/11846
+  // - https://github.com/typescript-eslint/typescript-eslint/issues/11847
+  // - https://github.com/typescript-eslint/typescript-eslint/issues/11849
+  // - https://github.com/typescript-eslint/typescript-eslint/issues/11850
+  // so keeping it disabled for now
+  '@typescript-eslint/no-useless-default-assignment': 'off',
+
   // https://typescript-eslint.io/rules/no-useless-empty-export/
   '@typescript-eslint/no-useless-empty-export': 'error',
 
