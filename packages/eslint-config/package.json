@@ -75,15 +75,15 @@
   },
   "devDependencies": {
     "@eslint/js": "9.39.2",
-    "@typescript-eslint/eslint-plugin": "8.50.0",
-    "@typescript-eslint/utils": "8.50.0",
-    "@vitest/eslint-plugin": "1.5.4",
+    "@typescript-eslint/eslint-plugin": "8.51.0",
+    "@typescript-eslint/utils": "8.51.0",
+    "@vitest/eslint-plugin": "1.6.4",
     "eslint": "9.39.2",
     "eslint-import-resolver-typescript": "4.4.4",
     "eslint-plugin-import-x": "4.16.1",
     "eslint-plugin-react-hooks": "7.0.1",
-    "eslint-plugin-react-hooks-extra": "2.3.13",
-    "eslint-plugin-react-x": "2.3.13",
-    "typescript-eslint": "8.50.0"
+    "eslint-plugin-react-hooks-extra": "2.5.0",
+    "eslint-plugin-react-x": "2.5.0",
+    "typescript-eslint": "8.51.0"
   }
 }
