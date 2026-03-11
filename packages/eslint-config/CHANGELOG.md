@@ -1,5 +1,24 @@
 # @marcalexiei/eslint-config
 
+## 6.0.0
+
+### Major Changes
+
+- [#144](https://github.com/marcalexiei/eslint-config/pull/144) [`8cce3fa`](https://github.com/marcalexiei/eslint-config/commit/8cce3fa891aede213c41c70d83fb8def9c9b93fc) Thanks [@marcalexiei](https://github.com/marcalexiei)! - feat!: support `eslint@10`
+  - Drop support for `eslint@9`
+  - Update peer dependencies requirements
+    - `@vitest/eslint-plugin` ➡️ `^1.6.0"`
+    - `eslint-import-resolver-typescript` ➡️ `^4.0.0`
+    - `eslint-plugin-import-x` ➡️ `^4.16.2`
+    - `eslint-plugin-react-hooks` ➡️ `^7`
+    - `eslint-plugin-react-hooks-extra` ➡️ `^2.13.0`
+    - `eslint-plugin-react-x` ➡️ `^2.13.0`
+    - `typescript-eslint` ➡️ `^8.57.0`
+
+### Minor Changes
+
+- [#144](https://github.com/marcalexiei/eslint-config/pull/144) [`8cce3fa`](https://github.com/marcalexiei/eslint-config/commit/8cce3fa891aede213c41c70d83fb8def9c9b93fc) Thanks [@marcalexiei](https://github.com/marcalexiei)! - feat: add support for Node@25
+
 ## 5.0.0
 
 ### Major Changes
