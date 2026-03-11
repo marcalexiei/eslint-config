@@ -563,6 +563,9 @@ const TYPESCRIPT_RULES_CONFIG: PluginRulesConfig = {
   // https://typescript-eslint.io/rules/strict-boolean-expressions/
   '@typescript-eslint/strict-boolean-expressions': 'off',
 
+  // https://typescript-eslint.io/rules/strict-void-return/
+  '@typescript-eslint/strict-void-return': 'error',
+
   // https://typescript-eslint.io/rules/switch-exhaustiveness-check/
   '@typescript-eslint/switch-exhaustiveness-check': 'off',
 

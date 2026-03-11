@@ -7,7 +7,7 @@
     "access": "public"
   },
   "engines": {
-    "node": "^20 || ^22 || ^24"
+    "node": "^20.19 || ^22 || >=24"
   },
   "repository": {
     "type": "git",
@@ -50,14 +50,14 @@
     "lint": "eslint ."
   },
   "peerDependencies": {
-    "@vitest/eslint-plugin": "^1.5.0",
-    "eslint": "^9.39.0",
+    "@vitest/eslint-plugin": "^1.6.0",
+    "eslint": "^10",
     "eslint-import-resolver-typescript": "^4.0.0",
-    "eslint-plugin-import-x": "^4.4.0",
-    "eslint-plugin-react-hooks": "^5.2.0 || ^6 || ^7",
-    "eslint-plugin-react-hooks-extra": "^2.0.2",
-    "eslint-plugin-react-x": "^2.0.2",
-    "typescript-eslint": "^8.48.0"
+    "eslint-plugin-import-x": "^4.16.2",
+    "eslint-plugin-react-hooks": "^7",
+    "eslint-plugin-react-hooks-extra": "^2.13.0",
+    "eslint-plugin-react-x": "^2.13.0",
+    "typescript-eslint": "^8.57.0"
   },
   "peerDependenciesMeta": {
     "@vitest/eslint-plugin": {
@@ -74,16 +74,16 @@
     }
   },
   "devDependencies": {
-    "@eslint/js": "9.39.2",
-    "@typescript-eslint/eslint-plugin": "8.50.0",
-    "@typescript-eslint/utils": "8.50.0",
-    "@vitest/eslint-plugin": "1.5.4",
-    "eslint": "9.39.2",
+    "@eslint/js": "10.0.1",
+    "@typescript-eslint/eslint-plugin": "8.57.0",
+    "@typescript-eslint/utils": "8.57.0",
+    "@vitest/eslint-plugin": "1.6.10",
+    "eslint": "10.0.3",
     "eslint-import-resolver-typescript": "4.4.4",
-    "eslint-plugin-import-x": "4.16.1",
+    "eslint-plugin-import-x": "4.16.2",
     "eslint-plugin-react-hooks": "7.0.1",
-    "eslint-plugin-react-hooks-extra": "2.3.13",
-    "eslint-plugin-react-x": "2.3.13",
-    "typescript-eslint": "8.50.0"
+    "eslint-plugin-react-hooks-extra": "2.13.0",
+    "eslint-plugin-react-x": "2.13.0",
+    "typescript-eslint": "8.57.0"
   }
 }

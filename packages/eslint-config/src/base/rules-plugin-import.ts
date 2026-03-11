@@ -1,5 +1,5 @@
 import type { Linter } from 'eslint';
-import type eslintPluginImportX from 'eslint-plugin-import-x';
+import type * as eslintPluginImportX from 'eslint-plugin-import-x';
 
 import type { PluginRulesRemapper } from '../_utils/plugin-rules-mapper.js';
 
@@ -11,6 +11,7 @@ type PluginRules = Omit<
   // https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/no-rename-default.md
   | 'no-rename-default'
 >;
+
 type PluginRulesConfig = PluginRulesRemapper<'import-x', PluginRules>;
 
 export const RULES_PLUGIN_IMPORT: Linter.RulesRecord = {

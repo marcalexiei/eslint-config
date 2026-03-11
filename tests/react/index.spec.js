@@ -66,7 +66,7 @@ describe('display-name', () => {
       'react-x/no-missing-component-display-name',
     );
     assert.strictEqual(message.severity, 2);
-    assert.strictEqual(message.messageId, 'noMissingComponentDisplayName');
+    assert.strictEqual(message.messageId, 'default');
   });
 });
 
@@ -80,6 +80,6 @@ describe('no-unused-props', () => {
     const [message] = fileMessages;
     assert.strictEqual(message.ruleId, 'react-x/no-unused-props');
     assert.strictEqual(message.severity, 2);
-    assert.strictEqual(message.messageId, 'noUnusedProps');
+    assert.strictEqual(message.messageId, 'default');
   });
 });
