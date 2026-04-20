@@ -6,6 +6,7 @@ export function pippo(): number {
 
 const asd: MyModel = { boh: true };
 
+// eslint-disable-next-line no-console
 console.info(asd.boh);
 
 export enum MyEnumWithFunnyThings {

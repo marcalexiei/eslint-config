@@ -6,6 +6,7 @@
     "target": "ES2022",
 
     /* Modules */
+    "rootDir": "${configDir}",
     "lib": ["ES2023"],
     "module": "ESNext",
 
