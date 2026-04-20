@@ -1,5 +1,13 @@
 # @marcalexiei/eslint-config
 
+## 7.0.0
+
+### Major Changes
+
+- [#150](https://github.com/marcalexiei/eslint-config/pull/150) [`96e0cc7`](https://github.com/marcalexiei/eslint-config/commit/96e0cc78ecb2bdb71558a2107ea8e3eaa9ca6f19) Thanks [@marcalexiei](https://github.com/marcalexiei)! - feat(react): drop `react-hooks` config
+
+- [#150](https://github.com/marcalexiei/eslint-config/pull/150) [`96e0cc7`](https://github.com/marcalexiei/eslint-config/commit/96e0cc78ecb2bdb71558a2107ea8e3eaa9ca6f19) Thanks [@marcalexiei](https://github.com/marcalexiei)! - feat(react)!: rely only on `@eslint-react` packages
+
 ## 6.0.0
 
 ### Major Changes
