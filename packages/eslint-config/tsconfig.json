@@ -3,6 +3,8 @@
   "exclude": ["dist"],
   "compilerOptions": {
     "module": "Node16",
-    "verbatimModuleSyntax": true
+    "verbatimModuleSyntax": true,
+    "lib": [],
+    "types": ["node"]
   }
 }

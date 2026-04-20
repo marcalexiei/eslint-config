@@ -28,10 +28,6 @@
       "types": "./dist/react/index.d.ts",
       "default": "./dist/react/index.js"
     },
-    "./react-hooks": {
-      "types": "./dist/react-hooks/index.d.ts",
-      "default": "./dist/react-hooks/index.js"
-    },
     "./typescript": {
       "types": "./dist/typescript/index.d.ts",
       "default": "./dist/typescript/index.js"
@@ -54,36 +50,32 @@
     "eslint": "^10",
     "eslint-import-resolver-typescript": "^4.0.0",
     "eslint-plugin-import-x": "^4.16.2",
-    "eslint-plugin-react-hooks": "^7",
-    "eslint-plugin-react-hooks-extra": "^2.13.0",
-    "eslint-plugin-react-x": "^2.13.0",
+    "eslint-plugin-react-jsx": "^4.2.3",
+    "eslint-plugin-react-x": "^4.2.3",
     "typescript-eslint": "^8.57.0"
   },
   "peerDependenciesMeta": {
     "@vitest/eslint-plugin": {
       "optional": true
     },
-    "eslint-plugin-react-hooks": {
-      "optional": true
-    },
-    "eslint-plugin-react-hooks-extra": {
-      "optional": true
-    },
     "eslint-plugin-react-x": {
+      "optional": true
+    },
+    "eslint-plugin-react-jsx": {
       "optional": true
     }
   },
   "devDependencies": {
+    "@eslint-react/kit": "4.2.3",
     "@eslint/js": "10.0.1",
-    "@typescript-eslint/eslint-plugin": "8.57.0",
-    "@typescript-eslint/utils": "8.57.0",
-    "@vitest/eslint-plugin": "1.6.10",
-    "eslint": "10.0.3",
+    "@typescript-eslint/eslint-plugin": "8.58.2",
+    "@typescript-eslint/utils": "8.58.2",
+    "@vitest/eslint-plugin": "1.6.16",
+    "eslint": "10.2.1",
     "eslint-import-resolver-typescript": "4.4.4",
     "eslint-plugin-import-x": "4.16.2",
-    "eslint-plugin-react-hooks": "7.0.1",
-    "eslint-plugin-react-hooks-extra": "2.13.0",
-    "eslint-plugin-react-x": "2.13.0",
-    "typescript-eslint": "8.57.0"
+    "eslint-plugin-react-jsx": "4.2.3",
+    "eslint-plugin-react-x": "4.2.3",
+    "typescript-eslint": "8.58.2"
   }
 }
