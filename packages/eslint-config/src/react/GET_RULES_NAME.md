@@ -12,4 +12,4 @@
    node './packages/eslint-config/scripts/get-rules-from-react-x.ts'
    ```
 
-2. Update the relevant `ReactXRules` type in `rule.ts` file with the relevant output
+2. Update the relevant `PluginRuleNames` type in `rule.ts` file with the relevant output

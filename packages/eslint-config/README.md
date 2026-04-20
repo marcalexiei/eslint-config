@@ -23,7 +23,6 @@ The following presets are available:
 - `base` → `"@marcalexiei/eslint-config/base"`
 - `typescript` → `"@marcalexiei/eslint-config/typescript"`
 - `react` → `"@marcalexiei/eslint-config/react"`
-- `react-hooks` → `"@marcalexiei/eslint-config/react-hooks"`
 - `vitest` → `"@marcalexiei/eslint-config/vitest"`
 
 ## Install
@@ -107,7 +106,7 @@ export default defineConfig(base, typescript, {
 **Install instructions:**
 
 ```shell
-npm i --save-dev eslint @marcalexiei/eslint-config typescript typescript-eslint eslint-plugin-import-x eslint-import-resolver-typescript eslint-plugin-react-x eslint-plugin-react-hooks eslint-plugin-react-hooks-extra
+npm i --save-dev eslint @marcalexiei/eslint-config typescript typescript-eslint eslint-plugin-import-x eslint-import-resolver-typescript eslint-plugin-react-x eslint-plugin-react-jsx
 ```
 
 **Configuration:**
@@ -118,9 +117,8 @@ import { defineConfig } from 'eslint/config';
 import base from '@marcalexiei/eslint-config/base';
 import typescript from '@marcalexiei/eslint-config/typescript';
 import react from '@marcalexiei/eslint-config/react';
-import reactHooks from '@marcalexiei/eslint-config/react-hooks';
 
-export default defineConfig(base, typescript, react, reactHooks, {
+export default defineConfig(base, typescript, react, {
   languageOptions: {
     parserOptions: {
       project: './tsconfig.json',
