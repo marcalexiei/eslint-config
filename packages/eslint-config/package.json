@@ -66,7 +66,7 @@
     }
   },
   "devDependencies": {
-    "@eslint-react/kit": "4.2.3",
+    "@eslint-react/kit": "5.6.6",
     "@eslint/js": "10.0.1",
     "@typescript-eslint/eslint-plugin": "8.58.2",
     "@typescript-eslint/utils": "8.58.2",
