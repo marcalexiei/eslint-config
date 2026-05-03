@@ -104,6 +104,28 @@ describe('no-useless-fragment', () => {
   });
 });
 
+describe('prefer-namespace-import', () => {
+  it('should throw error', async () => {
+    const result = await eslint.lintFiles([
+      './fixtures/prefer-namespace-import',
+    ]);
+
+    const fileMessages = result[0].messages;
+    assert.strictEqual(fileMessages.length, 1);
+
+    const [message] = fileMessages;
+    assert.strictEqual(
+      message.ruleId,
+      '@eslint-react/kit/prefer-namespace-import',
+    );
+    assert.strictEqual(message.severity, 2);
+    assert.strictEqual(
+      message.message,
+      'Prefer importing React as \'import * as React from "react"\'',
+    );
+  });
+});
+
 describe('shorthand-fragment', () => {
   it('should throw error', async () => {
     const result = await eslint.lintFiles(['./fixtures/shorthand-fragment']);
