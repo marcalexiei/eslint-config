@@ -8,16 +8,16 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "react": "19.2.4"
+    "react": "19.2.5"
   },
   "devDependencies": {
     "@marcalexiei/eslint-config": "workspace:*",
     "@types/react": "19.2.14",
-    "eslint": "10.2.1",
+    "eslint": "10.3.0",
     "eslint-import-resolver-typescript": "4.4.4",
     "eslint-plugin-import-x": "4.16.2",
-    "eslint-plugin-react-x": "4.2.3",
-    "eslint-plugin-react-jsx": "4.2.3",
-    "typescript-eslint": "8.58.2"
+    "eslint-plugin-react-jsx": "5.7.1",
+    "eslint-plugin-react-x": "5.7.1",
+    "typescript-eslint": "8.59.1"
   }
 }

@@ -15,6 +15,7 @@ export function AnotherComponent(): React.JSX.Element {
 
   return (
     <>
+      <span>{foo}</span>
       <button onClick={handleClick}>edit foo</button>
       <TestComponent itemList={[]} />
     </>
