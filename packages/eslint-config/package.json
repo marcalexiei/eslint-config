@@ -68,15 +68,15 @@
   "devDependencies": {
     "@eslint-react/kit": "5.7.1",
     "@eslint/js": "10.0.1",
-    "@typescript-eslint/eslint-plugin": "8.59.1",
-    "@typescript-eslint/utils": "8.59.1",
-    "@vitest/eslint-plugin": "1.6.16",
-    "eslint": "10.3.0",
-    "eslint-import-resolver-typescript": "4.4.4",
+    "@typescript-eslint/eslint-plugin": "8.60.1",
+    "@typescript-eslint/utils": "8.60.1",
+    "@vitest/eslint-plugin": "1.6.19",
+    "eslint": "10.4.1",
+    "eslint-import-resolver-typescript": "4.4.5",
     "eslint-plugin-import-x": "4.16.2",
-    "eslint-plugin-react-jsx": "5.7.1",
-    "eslint-plugin-react-x": "5.7.1",
+    "eslint-plugin-react-jsx": "5.8.10",
+    "eslint-plugin-react-x": "5.8.10",
     "typescript": "6.0.3",
-    "typescript-eslint": "8.59.1"
+    "typescript-eslint": "8.60.1"
   }
 }
