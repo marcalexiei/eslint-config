@@ -28,7 +28,7 @@
   "prettier": "@marcalexiei/prettier-config",
   "devDependencies": {
     "@changesets/changelog-github": "0.6.0",
-    "@changesets/cli": "2.31.0",
+    "@changesets/cli": "2.31.1",
     "@marcalexiei/prettier-config": "1.1.4",
     "@types/node": "24.12.2",
     "husky": "9.1.7",
