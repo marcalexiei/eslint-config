@@ -3,7 +3,7 @@ import fs from 'node:fs';
 
 import path from 'node:path';
 
-import { testShadow } from '../generic/index';
+import { testShadow } from '../generic/index.js';
 
 Object.keys(testShadow);
 path.basename(fs.Stats.name);

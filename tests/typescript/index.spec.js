@@ -34,6 +34,17 @@ describe('import', () => {
   });
 });
 
+describe('import-x/extensions', () => {
+  it('allows `.js` specifiers resolving to `.ts` files', async () => {
+    const result = await eslint.lintFiles([
+      './fixtures/import-extension-alias',
+    ]);
+    const messages = result.flatMap((el) => el.messages);
+
+    assert.deepStrictEqual(messages, []);
+  });
+});
+
 describe('import/no-cycle', () => {
   it('throw error', async () => {
     const result = await eslint.lintFiles(['./fixtures/import-no-cycle']);
