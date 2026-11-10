@@ -1,5 +1,15 @@
 # @marcalexiei/eslint-config
 
+## 8.0.0
+
+### Major Changes
+
+- [#192](https://github.com/marcalexiei/eslint-config/pull/192) [`dfa220a`](https://github.com/marcalexiei/eslint-config/commit/dfa220af83326a62a65e884ffe752222cc8c5ee5) Thanks [@marcalexiei](https://github.com/marcalexiei)! - feat(import)!: support `eslint-plugin-import-x@4.18`
+  - `import-x/extensions` now requires `.js`, `.mjs` and `.cjs` extensions on relative imports, so ESM specifiers like `./foo.js` resolving to `foo.ts` are allowed. Extensionless relative imports of JavaScript files are now reported.
+  - `import-x/extensions` sets `ignorePackages: true`: package subpaths such as `pkg/sub` are not checked
+  - Update peer dependency requirement: `eslint-plugin-import-x` ➡️ `^4.18.1`
+  - Turn off the new `import-x/avoid-*` rules
+
 ## 7.0.0
 
 ### Major Changes
