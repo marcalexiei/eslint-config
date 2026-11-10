@@ -48,3 +48,22 @@ describe('import', () => {
     assert.strictEqual(importOrderError.messageId, 'noLineWithinGroup');
   });
 });
+
+describe('import-x/extensions', () => {
+  it('throws error', async () => {
+    const result = await eslint.lintFiles(['./fixtures/import-extension']);
+
+    const fileWithErrors = result.filter((el) => el.errorCount > 0);
+
+    assert.strictEqual(fileWithErrors.length, 1);
+
+    const [firstFile] = fileWithErrors;
+
+    assert.strictEqual(firstFile.errorCount, 1);
+
+    const [extensionError] = firstFile.messages;
+
+    assert.strictEqual(extensionError.ruleId, 'import-x/extensions');
+    assert.strictEqual(extensionError.messageId, 'missingKnown');
+  });
+});

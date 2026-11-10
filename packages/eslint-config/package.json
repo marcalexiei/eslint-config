@@ -49,7 +49,7 @@
     "@vitest/eslint-plugin": "^1.6.0",
     "eslint": "^10",
     "eslint-import-resolver-typescript": "^4.0.0",
-    "eslint-plugin-import-x": "^4.16.2",
+    "eslint-plugin-import-x": "^4.18.1",
     "eslint-plugin-react-jsx": "^5.7.1",
     "eslint-plugin-react-x": "^5.7.1",
     "typescript-eslint": "^8.59.0"
@@ -73,7 +73,7 @@
     "@vitest/eslint-plugin": "1.6.16",
     "eslint": "10.3.0",
     "eslint-import-resolver-typescript": "4.4.4",
-    "eslint-plugin-import-x": "4.16.2",
+    "eslint-plugin-import-x": "4.18.1",
     "eslint-plugin-react-jsx": "5.7.1",
     "eslint-plugin-react-x": "5.7.1",
     "typescript": "6.0.3",

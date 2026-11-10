@@ -129,12 +129,15 @@ export const RULES_PLUGIN_IMPORT: Linter.RulesRecord = {
     'error',
     'always',
     {
+      // an exports subpath (`pkg/sub`) cannot take an extension
+      ignorePackages: true,
       pattern: {
         ts: 'never',
         tsx: 'never',
-        js: 'never',
-        mjs: 'never',
-        cjs: 'never',
+        // ESM specifiers: `./foo.js` may point to `foo.ts`
+        js: 'always',
+        mjs: 'always',
+        cjs: 'always',
         json: 'always',
       },
     },
@@ -276,6 +279,22 @@ export const RULES_PLUGIN_IMPORT: Linter.RulesRecord = {
   // Use this rule to prevent importing packages through relative paths.
   // https://github.com/un-ts/eslint-plugin-import-x/blob/1012eb951767279ce3b540a4ec4f29236104bb5b/docs/rules/no-relative-packages.md
   'import-x/no-relative-packages': 'error',
+
+  // Forbid authoring of barrel files
+  // https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/avoid-barrel-files.md
+  'import-x/avoid-barrel-files': 'off',
+
+  // Forbid importing barrel files
+  // https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/avoid-importing-barrel-files.md
+  'import-x/avoid-importing-barrel-files': 'off',
+
+  // Forbid namespace imports
+  // https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/avoid-namespace-import.md
+  'import-x/avoid-namespace-import': 'off',
+
+  // Forbid re-exporting * from a module
+  // https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/avoid-re-export-all.md
+  'import-x/avoid-re-export-all': 'off',
 
   // ensure absolute imports are above relative imports and that unassigned imports are ignored
   // https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/order.md
