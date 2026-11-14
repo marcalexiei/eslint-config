@@ -4,8 +4,8 @@ packages:
 
 # esbuild is used internally by Vitest, but Vitest itself is not run in this repository.
 # We only need to test spec files using eslint.
-ignoredBuiltDependencies:
-  - esbuild
+allowBuilds:
+  esbuild: false
+  unrs-resolver: true
 
-onlyBuiltDependencies:
-  - unrs-resolver
+autoDedupe: true
